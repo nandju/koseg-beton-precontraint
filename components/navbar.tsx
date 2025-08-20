@@ -17,7 +17,7 @@ export default function Navbar() {
               {/* <div className="w-8 h-8 rounded-sm flex items-center justify-center" style={{backgroundColor: '#021F69'}}>
                 <div className="w-4 h-4 rounded-sm" style={{backgroundColor: '#FEFEFE'}}></div>
               </div> */}
-              <div className="text-xl font-bold" style={{color: '#FEFEFE'}}>KOSEG<span className="text-xs">Béton Précontraint</span> </div>
+              <h1 className="text-xl font-bold" style={{color: '#FEFEFE'}}>KOSEG<span className="text-xs">Béton Précontraint</span> </h1>
             </div>
           </div>
 

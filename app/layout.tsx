@@ -48,7 +48,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${sourcesans3.variable} ${museomoderno.variable} antialiased`}
       >
-        <div className="max-w-screen-2xl mx-auto">
+        <div className="max-w-screen-2xl font-sourcesans3 mx-auto">
             <Navbar />
              {children}
              {/* <Footer /> */}
