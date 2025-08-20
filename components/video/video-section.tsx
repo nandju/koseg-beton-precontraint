@@ -61,7 +61,7 @@ export default function VideoSection() {
       </video>
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#021F69]/30"></div>
+      <div className="absolute inset-0 bg-[#021F69]/15"></div>
       
       {/* Contenu qui glisse depuis le bas */}
       <div 
