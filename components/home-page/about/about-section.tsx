@@ -72,7 +72,7 @@ export default function AboutSection() {
                     key={category.name}
                     className={`p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 ${
                       isHovered
-                        ? "bg-[#7F95AF] text-[#FEFEFE] transform scale-105"
+                        ? "bg-[#021F69] text-[#FEFEFE] transform scale-105"
                         : "bg-[#FEFEFE] text-[#021F69] hover:shadow-lg"
                     }`}
                     onMouseEnter={() => setHoveredCategory(category.name)}
