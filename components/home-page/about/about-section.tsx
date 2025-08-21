@@ -13,14 +13,14 @@ export default function AboutSection() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
 
   return (
-    <section className="py-20 bg-[#FEFEFE]">
+    <section className="py-12 sm:py-16 lg:py-20 bg-transparent">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Circular image with experience text */}
-          <div className="relative flex justify-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          {/* Right side - Circular image with experience text */}
+          <div className="relative flex justify-center order-1 lg:order-1">
             <div className="relative">
               {/* Circular border with rotating text */}
-              <div className="relative w-[450px] h-[450px] rounded-full border-2 border-[#021F69] p-4">
+              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-[#021F69] p-3 sm:p-4 bg-[#FEFEFE]/90 backdrop-blur-sm">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img
                     src="/assets/images/illustrations/page-accueil/about.png"
@@ -34,7 +34,7 @@ export default function AboutSection() {
                     <defs>
                       <path id="circle" d="M 160, 160 m -140, 0 a 140,140 0 1,1 280,0 a 140,140 0 1,1 -280,0" />
                     </defs>
-                    <text className="text-sm font-medium fill-[#021F69]">
+                    <text className="text-xs sm:text-sm font-medium fill-[#021F69]">
                       <textPath href="#circle" startOffset="0%">
                         25 ans d'expérience • 25 ans d'expérience •
                       </textPath>
@@ -45,16 +45,16 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right side - Content */}
-          <div className="space-y-8">
+          {/* Left side - Content */}
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-2">
             {/* Badge and heading */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6 text-start lg:text-left">
               <div className="inline-block">
-                <span className="px-4 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium">
+                <span className="px-4 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium bg-[#FEFEFE]/90 backdrop-blur-sm">
                   À PROPOS
                 </span>
               </div>
-              <h2 className="text-2xl md:text-5xl font-semibold text-[#021F69] leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-[#021F69] leading-tight">
                 Construire vos visions.
                 <br />
                 Créer la réalité.
@@ -62,7 +62,7 @@ export default function AboutSection() {
             </div>
 
             {/* Category grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {categories.map((category) => {
                 const Icon = category.icon
                 const isHovered = hoveredCategory === category.name
@@ -70,20 +70,20 @@ export default function AboutSection() {
                 return (
                   <div
                     key={category.name}
-                    className={`p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 ${
+                    className={`p-4 sm:p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 backdrop-blur-sm ${
                       isHovered
                         ? "bg-[#021F69] text-[#FEFEFE] transform scale-105"
-                        : "bg-[#FEFEFE] text-[#021F69] hover:shadow-lg"
+                        : "bg-[#FEFEFE]/90 text-[#021F69] hover:shadow-lg"
                     }`}
                     onMouseEnter={() => setHoveredCategory(category.name)}
                     onMouseLeave={() => setHoveredCategory(null)}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <Icon className="w-6 h-6" />
-                        <span className="font-semibold">{category.name}</span>
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                        <span className="font-semibold text-sm sm:text-base">{category.name}</span>
                       </div>
-                      <ArrowUpRight className="w-5 h-5" />
+                      <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </div>
                 )
@@ -91,18 +91,18 @@ export default function AboutSection() {
             </div>
 
             {/* Description */}
-            <p className="text-[#7F95AF] leading-relaxed">
+            <p className="text-[#7F95AF] leading-relaxed text-start lg:text-left text-sm sm:text-base">
               Notre mission est de transformer vos idées en réalisations durables, grâce à la post-tension et à une ingénierie de qualité.
             </p>
 
             {/* Founder signature */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 justify-start lg:justify-start">
               <div>
-                <h4 className="font-semibold text-[#021F69]">Mme KOUAME GONTY</h4>
-                <p className="text-[#7F95AF] text-sm">Client</p>
+                <h4 className="font-semibold text-[#021F69] text-sm sm:text-base">Mme KOUAME GONTY</h4>
+                <p className="text-[#7F95AF] text-xs sm:text-sm">Client</p>
               </div>
               <div className="ml-8">
-                <img src="/assets/images/illustrations/page-accueil/signature.png" alt="Signature" className="h-12 w-auto" />
+                <img src="/assets/images/illustrations/page-accueil/signature.png" alt="Signature" className="h-8 sm:h-12 w-auto" />
               </div>
             </div>
           </div>
