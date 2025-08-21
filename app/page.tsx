@@ -1,8 +1,11 @@
-import ContactSection from "@/components/contact/contact-section";
-import HeroSection from "@/components/hero/hero-section";
+
+import AboutSection from "@/components/home-page/about/about-section";
+import ContactSection from "@/components/home-page/contact/contact-section";
+import HeroSection from "@/components/home-page/hero/hero-section";
+import ServicesSection from "@/components/home-page/services/services-section";
+import VideoSection from "@/components/home-page/video/video-section";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
-import ServicesSection from "@/components/services/services-section";
-import VideoSection from "@/components/video/video-section";
+
 
 
 
@@ -14,6 +17,7 @@ export default function Home() {
       <VideoSection />
       <ServicesSection />
       <ContactSection />
+      <AboutSection />
       <ScrollToTop />
     </main>
   )
