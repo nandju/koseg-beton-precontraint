@@ -1,163 +1,197 @@
 "use client"
+import { ArrowRight } from "lucide-react"
 
-import Image from "next/image"
-import Link from "next/link"
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Send, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-export default function Footer() {
+export default function FooterSection() {
   return (
-    <footer className="bg-gray-900 text-white">
-      {/* Contact Information Bar */}
-      <div className="border-b border-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Nous trouver */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#F77F00" }}>
-                <MapPin className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm">Nous trouver</h4>
-                <p className="text-gray-400 text-sm">Rue du Chevalier de Clieu, Abidjan</p>
-              </div>
-            </div>
-
-            {/* Nous appeler */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#F77F00" }}>
-                <Phone className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm">Nous appeler</h4>
-                <p className="text-gray-400 text-sm">01 23 45 67 89</p>
-              </div>
-            </div>
-
-            {/* Nous écrire */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "#F77F00" }}>
-                <Mail className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm">Nous écrire</h4>
-                <p className="text-gray-400 text-sm">contact@mairie.fr</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <footer className="relative">
+      {/* Bandeau animé haut */}
+      <div className="h-4 bg-gradient-to-r from-[#021F69] to-[#7F95AF] overflow-hidden">
+        <div
+          className="h-full bg-repeat-x animate-scroll-left"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+                 45deg,
+                 transparent,
+                 transparent 10px,
+                 rgba(255,255,255,0.3) 10px,
+                 rgba(255,255,255,0.3) 20px
+               )`,
+            width: "200%",
+          }}
+        ></div>
       </div>
 
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo et Description */}
-          <div>
-            <div className="mb-4">
-              <Image src="/assets/images/logo.png" alt="Logo Mairie" width={200} height={60} className="h-12 w-auto" />
-            </div>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Au service de nos concitoyens avec dévouement et transparence. Votre administration locale s'engage à améliorer la qualité de vie de tous les habitants à travers des services publics efficaces.
-            </p>
+      {/* Contenu principal du footer */}
+      <div className="bg-[#FEFEFE] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
 
-            {/* Horaires */}
-            <div className="mb-6">
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
-                <Clock className="h-4 w-4" style={{ color: "#009E60" }} />
-                Horaires d'ouverture
-              </h4>
-              <div className="text-gray-400 text-sm space-y-1">
-                <p>Lun - Ven : 8h00 - 17h00</p>
-                <p>Sam : 9h00 - 12h00</p>
-                <p className="text-red-400">Dim : Fermé</p>
-              </div>
+            {/* Logo central */}
+            <div className="flex flex-col items-start">
+              <div className="text-3xl font-bold text-[#021F69]">KOSEG</div>
+              <p className="text-sm text-[#021F69] mt-2 text-center">
+                Béton Précontraint
+              </p>
             </div>
 
-            {/* Réseaux sociaux */}
+            
+            {/* Colonne 1 */}
             <div>
-              <h4 className="font-semibold mb-4">Suivez-nous</h4>
-              <div className="flex gap-3">
-                <a href="https://facebook.com" target="_blank" className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-700 transition-colors">
-                  <Facebook className="h-5 w-5" />
+              <h4 className="text-[#021F69] font-semibold mb-4">Entreprise</h4>
+              <div className="space-y-3">
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  À propos
                 </a>
-                <a href="https://twitter.com" target="_blank" className="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center hover:bg-blue-500 transition-colors">
-                  <Twitter className="h-5 w-5" />
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Nos services
                 </a>
-                <a href="https://instagram.com" target="_blank" className="w-10 h-10 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity" style={{ backgroundColor: "#009E60" }}>
-                  <Instagram className="h-5 w-5" />
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Réalisations
                 </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Témoignages
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Blog
+                </a>
+                <br />
+              </div>
+            </div>
+
+            {/* Colonne 2 */}
+            <div>
+              <h4 className="text-[#021F69] font-semibold mb-4">Expertise</h4>
+              <div className="space-y-3">
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Études techniques
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Post-tension
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Fournitures
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Contact
+                </a>
+                <br />
+              </div>
+            </div>
+
+            
+            {/* Colonne 3 */}
+            <div>
+              <h4 className="text-[#021F69] font-semibold mb-4">Informations</h4>
+              <div className="space-y-3">
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  FAQ
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Mentions légales
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Confidentialité
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Plan du site
+                </a>
+                <br />
+              </div>
+            </div>
+
+            {/* Colonne 4 */}
+            <div>
+              <h4 className="text-[#021F69] font-semibold mb-4">Ressources</h4>
+              <div className="space-y-3">
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Carrières
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Partenaires
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Presse
+                </a>
+                <br />
+                <a href="#" className="text-[#021F69] hover:text-[#7F95AF] transition-colors">
+                  Événements
+                </a>
+                <br />
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Liens utiles */}
-          <div>
-            <h4 className="font-semibold mb-6" style={{ color: "#F77F00" }}>Liens utiles</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li><Link href="/">Accueil</Link></li>
-              <li><Link href="/conseil-municipal">Conseil municipal</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/actualites">Actualités</Link></li>
-              <li><Link href="/cultures">Vie culturelle</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </div>
 
-          {/* Services rapides */}
-          <div>
-            <h4 className="font-semibold mb-6" style={{ color: "#F77F00" }}>Services rapides</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li><Link href="/services">État civil</Link></li>
-              <li><Link href="/services">Attestations</Link></li>
-              <li><Link href="/services">Légalisations</Link></li>
-              <li><Link href="/services">Declarations et procedures</Link></li>
-              <li><Link href="/services">Recensement</Link></li>
-              <li><Link href="/services">Suivi des dossiers</Link></li>
-            </ul>
-          </div>
+      {/* Bannière CTA */}
+      <div className="relative bg-gradient-to-r from-[#021F69] to-[#7F95AF] py-16 overflow-hidden">
+        {/* Fond avec image */}
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="/assets/images/backgrounds/backgroundc.png"
+            alt="Construction"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-semibold mb-6" style={{ color: "#F77F00" }}>Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-              Restez informé des actualités municipales, des événements et des annonces importantes.
-            </p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Votre adresse email"
-                className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#F77F00] focus:ring-[#F77F00]"
-              />
-              <Button size="icon" className="flex-shrink-0 hover:opacity-90 transition-opacity" style={{ backgroundColor: "#009E60" }}>
-                <Send className="h-4 w-4" />
-              </Button>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="text-center lg:text-left mb-8 lg:mb-0">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#FEFEFE] mb-4">
+                Construisons ensemble l’avenir.
+              </h2>
+              <p className="text-[#FEFEFE]/90 text-lg max-w-md">
+                Des solutions fiables, innovantes et durables pour vos projets de construction et d’ingénierie.
+              </p>
             </div>
-            <p className="text-xs text-gray-500 mt-2">
-              En vous abonnant, vous acceptez de recevoir nos communications.
+
+            <button className="bg-[#FEFEFE] text-[#021F69] px-8 py-4 rounded-full font-semibold flex items-center space-x-2 hover:bg-[#7F95AF]/20 transition-colors">
+              <span>Commencez maintenant</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="bg-[#FEFEFE] py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-[#7F95AF]">
+            <p>
+              © 2025 <span className="font-semibold text-[#021F69]">KOSEG Béton Précontraint</span> – Tous droits réservés.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Footer bottom */}
-      <div className="border-t border-gray-800 pb-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <p className="text-gray-400 text-sm">
-              © 2025 Mairie. Tous droits réservés. | Développé avec
-              <span className="mx-1" style={{ color: "#F77F00" }}>♥</span>
-              pour nos citoyens
-            </p>
-            {/* <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
-              <Link href="/" className="text-gray-400 hover:text-white text-sm transition-colors">Accueil</Link>
-              <Link href="/mentions-legales" className="text-gray-400 hover:text-white text-sm transition-colors">Mentions légales</Link>
-              <Link href="/confidentialite" className="text-gray-400 hover:text-white text-sm transition-colors">Confidentialité</Link>
-              <Link href="/accessibilite" className="text-gray-400 hover:text-white text-sm transition-colors">Accessibilité</Link>
-              <Link href="/plan-du-site" className="text-gray-400 hover:text-white text-sm transition-colors">Plan du site</Link>
-            </div> */}
-          </div>
-        </div>
+      {/* Bandeau animé bas */}
+      <div className="h-4 bg-gradient-to-r from-[#021F69] to-[#7F95AF] overflow-hidden">
+        <div
+          className="h-full bg-repeat-x animate-scroll-left"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+                 45deg,
+                 transparent,
+                 transparent 10px,
+                 rgba(255,255,255,0.3) 10px,
+                 rgba(255,255,255,0.3) 20px
+               )`,
+            width: "200%",
+          }}
+        ></div>
       </div>
     </footer>
   )
