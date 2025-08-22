@@ -1,10 +1,11 @@
 import { cn } from "@/lib/utils";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
-import AboutSection from "./about-section";
+import FaqSection from "./faq-section";
 
-export function AnimatedGridPatternDemo() {
+
+export function AnimatedGridPatternDemoFaq() {
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-[#FEFEFE]">
+    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-[#FEFEFE]">
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.1}
@@ -16,7 +17,7 @@ export function AnimatedGridPatternDemo() {
         )}
       />
       <div className="relative z-10 w-full">
-        <AboutSection />
+        <FaqSection />
       </div>
     </div>
   );

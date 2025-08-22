@@ -12,6 +12,9 @@ import VideoSection from "@/components/home-page/video/video-section";
 // import Head from "@/components/home-page/why-us/head";
 import WhyUsSection from "@/components/home-page/why-us/why-us-section";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
+import { AnimatedGridPatternDemoFaq } from '../components/home-page/faq/animated-grid-pattern.-background';
+import { Testimonials } from "@/components/home-page/testimonials/testimonials";
+
 
 
 
@@ -29,7 +32,8 @@ export default function Home() {
       <WhyUsSection />
       <ScrollingTextSection />
       <StatisticsSection />
-      <FaqSection />
+      <AnimatedGridPatternDemoFaq />
+      <Testimonials />
       <ScrollToTop />
     </main>
   )
