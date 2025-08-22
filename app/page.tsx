@@ -13,7 +13,9 @@ import VideoSection from "@/components/home-page/video/video-section";
 import WhyUsSection from "@/components/home-page/why-us/why-us-section";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
 import { AnimatedGridPatternDemoFaq } from '../components/home-page/faq/animated-grid-pattern.-background';
-import { Testimonials } from "@/components/home-page/testimonials/testimonials";
+// import { Testimonials } from "@/components/home-page/testimonials/testimonials";
+import NewsSection from "@/components/home-page/news/news-section";
+import TestimonialsSection from "@/components/home-page/testimonialsV2/testimonials-section";
 
 
 
@@ -33,7 +35,9 @@ export default function Home() {
       <ScrollingTextSection />
       <StatisticsSection />
       <AnimatedGridPatternDemoFaq />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <TestimonialsSection />
+      <NewsSection />
       <ScrollToTop />
     </main>
   )
