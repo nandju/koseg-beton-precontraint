@@ -2,6 +2,7 @@
 // import AboutSection from "@/components/home-page/about/about-section";
 import { AnimatedGridPatternDemo } from "@/components/home-page/about/animated-grid-pattern.-background";
 import ContactSection from "@/components/home-page/contact/contact-section";
+import FaqSection from "@/components/home-page/faq/faq-section";
 import HeroSection from "@/components/home-page/hero/hero-section";
 import ProjectsSection from "@/components/home-page/projects/projects-section";
 import ScrollingTextSection from "@/components/home-page/scrolling-text/scrolling-text-section";
@@ -28,6 +29,7 @@ export default function Home() {
       <WhyUsSection />
       <ScrollingTextSection />
       <StatisticsSection />
+      <FaqSection />
       <ScrollToTop />
     </main>
   )

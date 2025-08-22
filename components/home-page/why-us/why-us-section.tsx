@@ -32,12 +32,13 @@ export default function WhyUsSection() {
       <div className="text-center mb-16 max-w-4xl mx-auto">
         <div 
           className="inline-block px-6 py-2 border-2 rounded-full text-sm font-medium mb-6"
-          style={{ borderColor: '#7F95AF', color: '#021F69', backgroundColor: '#FEFEFE' }}
+        //   className="px-4 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium bg-[#FEFEFE]/90 backdrop-blur-sm"
+          style={{ borderColor: '#021F69', color: '#021F69', backgroundColor: '#FEFEFE' }}
         >
           POURQUOI NOUS
         </div>
         <h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold"
+          className="text-xl sm:text-2xl lg:text-5xl font-semibold"
           style={{ color: '#021F69' }}
         >
           Nous avons de nombreuses raisons de nous choisir
