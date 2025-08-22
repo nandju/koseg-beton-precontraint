@@ -233,4 +233,19 @@ p {
   animation: spin-slow 20s linear infinite;
 }
 
+/* Added scrolling text animation for horizontal marquee effect */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 15s linear infinite;
+}
+
+
 }
