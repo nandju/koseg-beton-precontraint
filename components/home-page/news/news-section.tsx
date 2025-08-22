@@ -31,10 +31,10 @@ export default function NewsSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-2 border border-[#7F95AF] text-[#7F95AF] rounded-full text-sm font-medium mb-6">
+          <div className="inline-block px-6 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium mb-6">
             BLOGS
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#021F69] mb-4">Actualités et Articles</h2>
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#021F69] mb-4">Actualités et Articles</h2>
         </div>
 
         {/* News Cards */}
