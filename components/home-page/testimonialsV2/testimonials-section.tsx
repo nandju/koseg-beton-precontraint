@@ -95,8 +95,8 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="relative h-96 flex items-center justify-center">
+        {/* Testimonials Grid - 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
           {getVisibleTestimonials().map((testimonial, index) => {
             const isCenter = testimonial.position === 0
             const isLeft = testimonial.position === -1
@@ -105,21 +105,23 @@ export default function TestimonialsSection() {
             return (
               <div
                 key={testimonial.id}
-                className={`absolute transition-all duration-1000 ease-in-out ${
+                className={`transition-all duration-1000 ease-in-out ${
                   isCenter
-                    ? "z-20 scale-100 opacity-100"
-                    : isLeft
-                      ? "z-10 scale-75 opacity-60 -translate-x-80"
-                      : "z-10 scale-75 opacity-60 translate-x-80"
+                    ? "transform scale-110 z-20"
+                    : "transform scale-100 z-10"
                 }`}
               >
                 <div
-                  className={`w-96 h-80 rounded-2xl p-8 flex flex-col items-center justify-center text-center transition-all duration-1000 ${
-                    isCenter ? "bg-[#7F95AF] text-[#FEFEFE] shadow-2xl" : "bg-[#FEFEFE] text-[#021F69] shadow-lg"
-                  }`}
+                  className={`rounded-2xl p-6 text-center transition-all duration-1000 ${
+                    isCenter 
+                      ? "bg-[#7F95AF] text-[#FEFEFE] shadow-2xl min-h-[400px]" 
+                      : "bg-[#FEFEFE]/90 text-[#021F69] shadow-lg min-h-[350px] opacity-75"
+                  } flex flex-col justify-between`}
                 >
                   {/* Profile Image */}
-                  <div className="w-20 h-20 rounded-full overflow-hidden mb-4 border-4 border-[#FEFEFE]/20">
+                  <div className={`mx-auto rounded-full overflow-hidden mb-4 border-4 ${
+                    isCenter ? "w-20 h-20 border-[#FEFEFE]/20" : "w-16 h-16 border-[#7F95AF]/20"
+                  }`}>
                     <img
                       src={testimonial.img || "/placeholder.svg"}
                       alt={testimonial.name}
@@ -129,22 +131,42 @@ export default function TestimonialsSection() {
 
                   {/* Keyword */}
                   <div className="mb-4">
-                    <span className={`text-lg font-medium ${isCenter ? "text-[#FEFEFE]" : "text-[#7F95AF]"}`}>
+                    <span className={`font-medium ${
+                      isCenter 
+                        ? "text-xl text-[#FEFEFE]" 
+                        : "text-lg text-[#7F95AF]"
+                    }`}>
                       "{testimonial.keyword}"
                     </span>
                   </div>
 
                   {/* Testimonial Body */}
-                  <p className={`text-sm leading-relaxed mb-6 ${isCenter ? "text-[#FEFEFE]" : "text-[#021F69]/80"}`}>
-                    "{testimonial.body}"
-                  </p>
+                  <div className="flex-grow">
+                    <p className={`leading-relaxed mb-6 ${
+                      isCenter 
+                        ? "text-sm text-[#FEFEFE]" 
+                        : "text-xs text-[#021F69]/80"
+                    }`}>
+                      "{testimonial.body}"
+                    </p>
+                  </div>
 
                   {/* Name and Role */}
                   <div>
-                    <h4 className={`font-bold text-lg ${isCenter ? "text-[#FEFEFE]" : "text-[#021F69]"}`}>
+                    <h4 className={`font-bold mb-1 ${
+                      isCenter 
+                        ? "text-lg text-[#FEFEFE]" 
+                        : "text-base text-[#021F69]"
+                    }`}>
                       {testimonial.name}
                     </h4>
-                    <p className={`text-sm ${isCenter ? "text-[#FEFEFE]/80" : "text-[#7F95AF]"}`}>{testimonial.role}</p>
+                    <p className={`text-sm ${
+                      isCenter 
+                        ? "text-[#FEFEFE]/80" 
+                        : "text-[#7F95AF]"
+                    }`}>
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
