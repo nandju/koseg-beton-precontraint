@@ -55,7 +55,7 @@ export default function PricingSection() {
           {/* Left Content */}
           <div className="lg:w-1/3">
             <div 
-              className="inline-block px-6 py-2 border rounded-full text-sm font-medium mb-6"
+              className="inline-block px-4 py-2 border-2 rounded-full text-sm font-medium mb-6"
               style={{ 
                 borderColor: '#021F69', 
                 color: '#021F69' 
@@ -65,7 +65,7 @@ export default function PricingSection() {
             </div>
 
             <h2 
-              className="text-4xl lg:text-5xl font-bold mb-6 text-balance"
+              className="text-xl sm:text-2xl lg:text-5xl font-semibold mb-6 text-balance"
               style={{ color: '#021F69' }}
             >
               Secteurs que Nous Couvrons
