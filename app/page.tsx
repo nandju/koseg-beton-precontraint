@@ -16,6 +16,7 @@ import { AnimatedGridPatternDemoFaq } from '../components/home-page/faq/animated
 // import { Testimonials } from "@/components/home-page/testimonials/testimonials";
 import NewsSection from "@/components/home-page/news/news-section";
 import TestimonialsSection from "@/components/home-page/testimonialsV2/testimonials-section";
+import PricingSection from "@/components/home-page/pricing/pricing-section";
 
 
 
@@ -27,9 +28,11 @@ export default function Home() {
     <main className="relative">
       <HeroSection />
       {/* <VideoSection /> */}
+      <PricingSection />
+      <AnimatedGridPatternDemo />
       <ServicesSection />
       <ContactSection />
-      <AnimatedGridPatternDemo />
+      {/* <AnimatedGridPatternDemo /> */}
       <ProjectsSection />
       <WhyUsSection />
       <ScrollingTextSection />
