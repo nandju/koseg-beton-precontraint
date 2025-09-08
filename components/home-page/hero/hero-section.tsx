@@ -101,7 +101,7 @@ export default function HeroSection() {
             <p 
               key={`subtitle-${currentSlide}`}
               className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xl animate-[slideInUp_0.8s_ease-out_0.4s_both]"
-              style={{ color: '#7F95AF' }}
+              style={{ color: '#FEFEFE' }}
             >
               {slides[currentSlide].subtitle}
             </p>
@@ -153,7 +153,7 @@ export default function HeroSection() {
           
           {/* Background watermark text - Hidden on mobile */}
           <div 
-            className="absolute inset-0 items-center justify-center opacity-5 pointer-events-none z-10 hidden lg:flex"
+            className="absolute inset-0 items-center justify-center opacity-30 pointer-events-none z-10 hidden lg:flex"
             style={{ color: '#021F69' }}
           >
             <span className="text-[15rem] xl:text-[25rem] font-bold transform rotate-12 select-none">build</span>
