@@ -30,8 +30,9 @@ export default function Home() {
       {/* <VideoSection /> */}
       <PricingSection />
       <AnimatedGridPatternDemo />
-      <ServicesSection />
       <ContactSection />
+      <ServicesSection />
+      {/* <ContactSection /> */}
       {/* <AnimatedGridPatternDemo /> */}
       <ProjectsSection />
       <WhyUsSection />
