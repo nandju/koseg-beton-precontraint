@@ -2,13 +2,13 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Search, ShoppingCart, Menu, X } from "lucide-react"
+import { Search, ShoppingCart, Menu, X, Phone, PhoneCall } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className="relative top-0 left-0 right-0 z-50 bg-[#021F69]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#" className="px-3 py-2 text-sm font-medium" style={{color: '#021F69'}}>
+              <a href="#" className="px-3 py-2 text-sm font-medium hover:text-[#021F69]" style={{color: '#FEFEFE'}}>
                 Accueil
               </a>
               <a href="#" className="px-3 py-2 text-sm font-medium" style={{color: '#FEFEFE'}}>
@@ -55,10 +55,15 @@ export default function Navbar() {
                 0
               </span>
             </div>
-            <Button className="px-6 py-2 rounded-full"
-                    style={{backgroundColor: '#021F69', color: '#FEFEFE'}}>
-              Commencer →
-            </Button>
+            <a href="tel:+22507070707" className="inline-block">
+              <Button 
+                className="px-6 py-2 rounded-full flex items-center gap-2 font-semibold hover:scale-105 transition-all duration-300"
+                style={{ backgroundColor: '#FEFEFE', color: '#021F69', border: '2px solid #021F69' }}
+              >
+                <PhoneCall className="w-5 h-5" />
+                <span>+225 07 07 07 07</span>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -92,10 +97,15 @@ export default function Navbar() {
                 Contactez-nous
               </a>
               <div className="pt-4">
-                <Button className="px-6 py-2 rounded-full w-full"
-                        style={{backgroundColor: '#021F69', color: '#FEFEFE'}}>
-                  Commencer →
-                </Button>
+                <a href="tel:+22507070707" className="block">
+                  <Button
+                    className="px-6 py-2 rounded-full w-full flex items-center justify-center gap-2 font-semibold hover:scale-105 transition-all duration-300"
+                    style={{ backgroundColor: '#FEFEFE', color: '#021F69', border: '2px solid #021F69' }}
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>+225 07 07 07 07</span>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

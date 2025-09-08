@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect, useRef } from "react"
 import { ArrowUpRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const projects = [
   {
@@ -110,10 +111,10 @@ export default function ProjectsSection() {
             </div>
 
             <div className="pt-8">
-              <button className="group flex items-center gap-3 bg-[#7F95AF] hover:bg-[#7F95AF]/80 text-[#FEFEFE] px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+              <Button className="group flex items-center gap-3 bg-[#7F95AF] hover:bg-[#7F95AF]/80 text-[#FEFEFE] px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
                 Tous les Projets
                 <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -142,7 +143,7 @@ export default function ProjectsSection() {
             {/* Project indicators */}
             <div className="absolute bottom-6 left-6 flex gap-2">
               {projects.map((_, index) => (
-                <button
+                <Button
                   key={index}
                   onClick={() => setActiveProject(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${

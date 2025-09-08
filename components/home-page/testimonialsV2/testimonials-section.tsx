@@ -1,4 +1,5 @@
 "use client"
+import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 
 const testimonials = [
@@ -177,7 +178,7 @@ export default function TestimonialsSection() {
         {/* Carousel Indicators */}
         <div className="flex justify-center mt-12 space-x-2">
           {testimonials.map((_, index) => (
-            <button
+            <Button
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${

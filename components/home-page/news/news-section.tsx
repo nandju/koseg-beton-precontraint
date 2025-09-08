@@ -42,7 +42,7 @@ export default function NewsSection() {
           {newsArticles.map((article) => (
             <div
               key={article.id}
-              className="group relative bg-[#FEFEFE] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group relative bg-[#FEFEFE] rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
               {/* Image Container */}
               <div className="relative h-64 overflow-hidden">
