@@ -72,7 +72,7 @@ export default function Navbar() {
                 )}
               </div>
 
-              <a href="#" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+              <a href="services" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Services
               </a>
               <a href="#" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
@@ -147,7 +147,7 @@ export default function Navbar() {
                 )}
               </div>
 
-              <a href="#" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+              <a href="services" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Services
               </a>
               <a href="#" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
