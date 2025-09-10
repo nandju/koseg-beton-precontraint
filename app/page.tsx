@@ -42,7 +42,7 @@ export default function Home() {
       {/* <Testimonials /> */}
       <TestimonialsSection />
       <NewsSection />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </main>
   )
 }
