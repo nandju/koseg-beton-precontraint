@@ -55,7 +55,7 @@ export default function Navbar() {
                       À propos
                     </a>
                     <a 
-                      href="#" 
+                      href="/history" 
                       className="block px-4 py-3 text-sm font-medium hover:bg-[#7F95AF] hover:text-[#FEFEFE] transition-all duration-200 border-t border-gray-100"
                       style={{color: '#021F69'}}
                     >
@@ -137,10 +137,10 @@ export default function Navbar() {
                     <a href="#" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                       À propos
                     </a>
-                    <a href="#" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                    <a href="/history" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                       Histoire
                     </a>
-                    <a href="#" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                    <a href="/team" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                       Équipe
                     </a>
                   </div>
