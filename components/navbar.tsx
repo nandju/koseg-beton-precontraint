@@ -62,7 +62,7 @@ export default function Navbar() {
                       Histoire
                     </a>
                     <a 
-                      href="#" 
+                      href="/team" 
                       className="block px-4 py-3 text-sm font-medium hover:bg-[#7F95AF] hover:text-[#FEFEFE] transition-all duration-200 border-t border-gray-100"
                       style={{color: '#021F69'}}
                     >
