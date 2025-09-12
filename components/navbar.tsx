@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Search, Menu, X, Phone, PhoneCall, ChevronDown } from "lucide-react"
+import Link from "next/link"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,9 +17,11 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold" style={{color: '#FEFEFE'}}>
-                KOSEG<span className="text-xs">Béton Précontraint</span> 
-              </h1>
+              <Link href="/" className="hover:opacity-90 transition-opacity">
+                <h1 className="text-xl font-bold" style={{ color: '#FEFEFE' }}>
+                  KOSEG <span className="text-xs">Béton Précontraint</span>
+                </h1>
+              </Link>
             </div>
           </div>
 
@@ -47,13 +50,13 @@ export default function Navbar() {
                     style={{backgroundColor: '#FEFEFE', borderColor: '#7F95AF'}}
                     onMouseEnter={() => setIsDropdownOpen(true)}
                   >
-                    <a 
+                    {/* <a 
                       href="#" 
                       className="block px-4 py-3 text-sm font-medium hover:bg-[#7F95AF] hover:text-[#FEFEFE] transition-all duration-200"
                       style={{color: '#021F69'}}
                     >
                       À propos
-                    </a>
+                    </a> */}
                     <a 
                       href="/history" 
                       className="block px-4 py-3 text-sm font-medium hover:bg-[#7F95AF] hover:text-[#FEFEFE] transition-all duration-200 border-t border-gray-100"
@@ -75,10 +78,13 @@ export default function Navbar() {
               <a href="services" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Services
               </a>
-              <a href="#" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
-                FAQ
+              <a href="portfolio" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                Portfolio
               </a>
-              <a href="#" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+              <a href="blogs" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                Blogs
+              </a>
+              <a href="contacts" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Contacts
               </a>
             </div>
@@ -134,9 +140,9 @@ export default function Navbar() {
                 </Button>
                 {isDropdownOpen && (
                   <div className="pl-4 mt-1 space-y-1">
-                    <a href="#" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                    {/* <a href="#" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                       À propos
-                    </a>
+                    </a> */}
                     <a href="/history" className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                       Histoire
                     </a>
@@ -150,10 +156,13 @@ export default function Navbar() {
               <a href="services" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Services
               </a>
-              <a href="#" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
-                FAQ
+              <a href="portfolio" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                Portfolio
               </a>
-              <a href="#" className="block px-3 py-2 text-base font-medium rounded-md hover:bg-[#021F69] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+              <a href="blogs" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
+                Blogs
+              </a>
+              <a href="contacts" className="px-3 py-2 text-sm font-medium hover:text-[#7F95AF] transition-colors duration-200" style={{color: '#FEFEFE'}}>
                 Contacts
               </a>
               

@@ -3,14 +3,14 @@
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
-export default function ServicesHero() {
+export default function PortfoliosHero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/assets/images/illustrations/page-services/hero.png')",
+          backgroundImage: "url('/assets/images/illustrations/page-portfolios/hero.png')",
         }}
       >
         {/* Overlay for better text readability */}
@@ -20,15 +20,15 @@ export default function ServicesHero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-8 text-balance">Services</h1>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-8 text-balance">Portfolios</h1>
 
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center justify-center space-x-2 text-lg sm:text-xl">
           <Link href="/" className="hover:text-[#7F95AF] transition-colors duration-300">
-            Home
+            Accueil
           </Link>
           <ChevronRight className="w-5 h-5 text-white/70" />
-          <span className="text-white/90">Services</span>
+          <span className="text-white/90">Portfolios</span>
         </nav>
       </div>
 
