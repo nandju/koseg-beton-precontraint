@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const ConstructionBlog = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const articles = [
     {
@@ -56,8 +56,8 @@ const ConstructionBlog = () => {
     }
   ];
 
-  const getCategoryColor = (category) => {
-    const colors = {
+  const getCategoryColor = (category:string) => {
+    const colors: { [key: string]: string } = {
       'Usine': '#021F69',
       'Commercial': '#7F95AF',
       'Résidentiel': '#021F69',

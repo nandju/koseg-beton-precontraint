@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 const RealEstatePortfolio = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
 const projects = [
   {

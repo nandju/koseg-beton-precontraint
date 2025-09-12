@@ -94,7 +94,7 @@ const teamMembers = [
 ]
 
 export default function TeamMembers() {
-  const [hoveredMember, setHoveredMember] = useState(null)
+  const [hoveredMember, setHoveredMember] = useState<number | null>(null)
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>

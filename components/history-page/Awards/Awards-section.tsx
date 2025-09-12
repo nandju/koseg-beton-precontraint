@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Award, Trophy, Star, Globe } from "lucide-react"
 
 const AwardsTimeline = () => {
-  const [hoveredAward, setHoveredAward] = useState(null)
+  const [hoveredAward, setHoveredAward] = useState<number | null>(null)
 
   const awards = [
     {
