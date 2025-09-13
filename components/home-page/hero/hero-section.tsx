@@ -50,7 +50,7 @@ export default function HeroSection() {
         {/* Left Section - Content */}
         <div 
           className="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-10 md:px-16 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-24 min-h-screen lg:min-h-0"
-          style={{ backgroundColor: '#021F69' }}
+          style={{ backgroundColor: '#0B2C72' }}
         >
           {/* Badge */}
           <div className="mb-8 sm:mb-12 lg:mb-16 overflow-hidden">
@@ -61,8 +61,8 @@ export default function HeroSection() {
               <span 
                 className="inline-block font-bold px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-full text-xs sm:text-sm tracking-wider uppercase"
                 style={{
-                  backgroundColor: '#FEFEFE',
-                  color: '#021F69'
+                  backgroundColor: '#FFFFFF',
+                  color: '#0B2C72'
                 }}
               >
                 NOUS CONSTRUISONS
@@ -75,7 +75,7 @@ export default function HeroSection() {
             <h1 
               key={`title-${currentSlide}`}
               className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight animate-[slideInUp_0.8s_ease-out_0.2s_both]"
-              style={{ color: '#FEFEFE' }}
+              style={{ color: '#FFFFFF' }}
             >
               {slides[currentSlide].title.split(' ').map((word, index) => (
                 <span key={index}>
@@ -84,7 +84,7 @@ export default function HeroSection() {
                       {word}
                       <div 
                         className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 rounded-full"
-                        style={{ backgroundColor: '#FEFEFE' }}
+                        style={{ backgroundColor: '#FFB703' }}
                       />
                     </span>
                   ) : (
@@ -101,7 +101,7 @@ export default function HeroSection() {
             <p 
               key={`subtitle-${currentSlide}`}
               className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xl animate-[slideInUp_0.8s_ease-out_0.4s_both]"
-              style={{ color: '#FEFEFE' }}
+              style={{ color: '#FFFFFF' }}
             >
               {slides[currentSlide].subtitle}
             </p>
@@ -116,8 +116,8 @@ export default function HeroSection() {
               <Button 
                 className="px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 rounded-full text-sm sm:text-base lg:text-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center gap-2 sm:gap-3"
                 style={{
-                  backgroundColor: '#FEFEFE',
-                  color: '#021F69',
+                  backgroundColor: '#FFB703',
+                  color: '#FFFFFF',
                   border: 'none'
                 }}
               >
@@ -133,7 +133,7 @@ export default function HeroSection() {
               key={`phone-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_0.8s_both]"
             >
-              <p className="text-lg sm:text-xl lg:text-2xl font-bold" style={{ color: '#FEFEFE' }}>
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold" style={{ color: '#FFFFFF' }}>
                 {slides[currentSlide].phone}
               </p>
             </div>
@@ -141,7 +141,7 @@ export default function HeroSection() {
               key={`email-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_1s_both]"
             >
-              <p className="text-sm sm:text-base lg:text-xl" style={{ color: '#7F95AF' }}>
+              <p className="text-sm sm:text-base lg:text-xl" style={{ color: '#D1D5DB' }}>
                 {slides[currentSlide].email}
               </p>
             </div>
@@ -149,12 +149,12 @@ export default function HeroSection() {
         </div>
 
         {/* Right Section - Changing Image */}
-        <div className="w-full lg:w-1/2 relative overflow-hidden h-64 sm:h-96 lg:h-auto min-h-[400px] lg:min-h-screen" style={{ backgroundColor: '#FEFEFE' }}>
+        <div className="w-full lg:w-1/2 relative overflow-hidden h-64 sm:h-96 lg:h-auto min-h-[400px] lg:min-h-screen" style={{ backgroundColor: '#F3EEE3' }}>
           
           {/* Background watermark text - Hidden on mobile */}
           <div 
-            className="absolute inset-0 items-center justify-center opacity-30 pointer-events-none z-10 hidden lg:flex"
-            style={{ color: '#021F69' }}
+            className="absolute inset-0 items-center justify-center opacity-20 pointer-events-none z-10 hidden lg:flex"
+            style={{ color: '#0B2C72' }}
           >
             <span className="text-[15rem] xl:text-[25rem] font-bold transform rotate-12 select-none">build</span>
           </div>
@@ -186,7 +186,7 @@ export default function HeroSection() {
               <div 
                 className="absolute inset-0 opacity-10"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(2, 31, 105, 0.1) 0%, transparent 70%)'
+                  background: 'linear-gradient(135deg, rgba(11, 44, 114, 0.1) 0%, transparent 70%)'
                 }}
               />
             </div>
@@ -196,13 +196,13 @@ export default function HeroSection() {
           <div className="absolute top-4 sm:top-6 lg:top-10 right-4 sm:right-6 lg:right-10 z-20">
             <div 
               className="w-8 sm:w-12 lg:w-20 h-8 sm:h-12 lg:h-20 rounded-full opacity-20"
-              style={{ backgroundColor: '#021F69' }}
+              style={{ backgroundColor: '#0B2C72' }}
             />
           </div>
           <div className="absolute bottom-8 sm:bottom-12 lg:bottom-20 left-4 sm:left-6 lg:left-10 z-20">
             <div 
               className="w-16 sm:w-24 lg:w-32 h-0.5 sm:h-0.5 lg:h-1 opacity-30"
-              style={{ backgroundColor: '#7F95AF' }}
+              style={{ backgroundColor: '#374151' }}
             />
           </div>
         </div>

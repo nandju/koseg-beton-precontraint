@@ -4,7 +4,7 @@ import AboutSection from "./about-section";
 
 export function AnimatedGridPatternDemo() {
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-[#FEFEFE]">
+    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-[#F3EEE3]">
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.1}

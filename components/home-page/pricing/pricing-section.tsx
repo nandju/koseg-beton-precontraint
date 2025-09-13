@@ -49,7 +49,7 @@ export default function PricingSection() {
   }
 
   return (
-    <section className="py-20" style={{ backgroundColor: '#FEFEFE' }}>
+    <section className="py-20" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12">
           {/* Left Content */}
@@ -57,8 +57,8 @@ export default function PricingSection() {
             <div 
               className="inline-block px-4 py-2 border-2 rounded-full text-sm font-medium mb-6"
               style={{ 
-                borderColor: '#021F69', 
-                color: '#021F69' 
+                borderColor: '#0B2C72', 
+                color: '#0B2C72' 
               }}
             >
               TARIFICATION
@@ -66,14 +66,14 @@ export default function PricingSection() {
 
             <h2 
               className="text-xl sm:text-2xl lg:text-5xl font-semibold mb-6 text-balance"
-              style={{ color: '#021F69' }}
+              style={{ color: '#0B2C72' }}
             >
               Secteurs que Nous Couvrons
             </h2>
 
             <p 
               className="text-lg leading-relaxed mb-8"
-              style={{ color: '#7F95AF' }}
+              style={{ color: '#374151' }}
             >
               Un paragraphe descriptif qui explique aux clients à quel point vous êtes compétent et prouve qu'ils ont
               fait le bon choix.
@@ -82,13 +82,13 @@ export default function PricingSection() {
             <button 
               className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:scale-105"
               style={{ 
-                backgroundColor: '#021F69',
+                backgroundColor: '#0B2C72',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#7F95AF'
+                e.currentTarget.style.backgroundColor = '#FFB703'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#021F69'
+                e.currentTarget.style.backgroundColor = '#0B2C72'
               }}
             >
               En Savoir Plus
@@ -112,8 +112,8 @@ export default function PricingSection() {
                     <div
                       className="absolute inset-0 rounded-full border-2 transition-all duration-500"
                       style={{
-                        borderColor: isActive(sector.id) ? '#021F69' : '#7F95AF',
-                        opacity: isActive(sector.id) ? 1 : 0.5,
+                        borderColor: isActive(sector.id) ? '#0B2C72' : '#D1D5DB',
+                        opacity: isActive(sector.id) ? 1 : 0.7,
                         transform: isActive(sector.id) ? 'scale(1.05)' : 'scale(1)'
                       }}
                     />
@@ -122,7 +122,7 @@ export default function PricingSection() {
                     <div
                       className="absolute inset-2 rounded-full transition-all duration-500 overflow-hidden"
                       style={{
-                        backgroundColor: '#FEFEFE',
+                        backgroundColor: '#F3EEE3',
                         transform: isActive(sector.id) ? 'scale(0.95)' : 'scale(1)'
                       }}
                     >
@@ -142,7 +142,7 @@ export default function PricingSection() {
                         />
                         <div 
                           className="absolute inset-0 rounded-full"
-                          style={{ backgroundColor: '#021F69', opacity: 0.2 }}
+                          style={{ backgroundColor: '#0B2C72', opacity: 0.2 }}
                         />
                       </div>
 
@@ -151,14 +151,14 @@ export default function PricingSection() {
                         className="absolute inset-0 flex items-center justify-center p-4 transition-all duration-500"
                         style={{
                           backgroundColor: isActive(sector.id) ? 'rgba(0, 0, 0, 0.4)' : 'transparent',
-                          color: isActive(sector.id) ? '#FEFEFE' : '#021F69'
+                          color: isActive(sector.id) ? '#FFFFFF' : '#0B2C72'
                         }}
                       >
                         <span
                           className="text-center font-medium transition-all duration-300"
                           style={{
                             fontSize: isActive(sector.id) ? '1.125rem' : '1rem',
-                            color: isActive(sector.id) ? '#FEFEFE' : '#021F69',
+                            color: isActive(sector.id) ? '#FFFFFF' : '#0B2C72',
                             textShadow: isActive(sector.id) ? '0 2px 4px rgba(0,0,0,0.3)' : 'none'
                           }}
                         >
@@ -171,8 +171,8 @@ export default function PricingSection() {
                     <div
                       className="absolute inset-0 rounded-full border-4 transition-all duration-300"
                       style={{
-                        borderColor: '#021F69',
-                        opacity: isActive(sector.id) ? 0.3 : 0,
+                        borderColor: '#FFB703',
+                        opacity: isActive(sector.id) ? 0.4 : 0,
                         transform: isActive(sector.id) ? 'scale(1.1)' : 'scale(1)'
                       }}
                     />

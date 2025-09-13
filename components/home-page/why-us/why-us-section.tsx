@@ -27,19 +27,18 @@ const whyUsData = [
 
 export default function WhyUsSection() {
   return (
-    <section className="py-16 px-4" style={{ backgroundColor: '#FEFEFE' }}>
+    <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
       {/* Header */}
       <div className="text-center mb-16 max-w-4xl mx-auto">
         <div 
           className="inline-block px-6 py-2 border-2 rounded-full text-sm font-medium mb-6"
-        //   className="px-4 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium bg-[#FEFEFE]/90 backdrop-blur-sm"
-          style={{ borderColor: '#021F69', color: '#021F69', backgroundColor: '#FEFEFE' }}
+          style={{ borderColor: '#0B2C72', color: '#0B2C72', backgroundColor: '#FFFFFF' }}
         >
           POURQUOI NOUS
         </div>
         <h2 
           className="text-xl sm:text-2xl lg:text-5xl font-semibold"
-          style={{ color: '#021F69' }}
+          style={{ color: '#0B2C72' }}
         >
           Nous avons de nombreuses raisons de nous choisir
         </h2>
@@ -54,7 +53,7 @@ export default function WhyUsSection() {
             <div key={item.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Image */}
               <div className="relative">
-                <div className=" shadow-lg">
+                <div className="shadow-lg">
                   <img
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
@@ -63,7 +62,7 @@ export default function WhyUsSection() {
                 </div>
                 <div 
                   className="absolute top-4 right-4 text-4xl sm:text-5xl lg:text-6xl font-bold opacity-20"
-                  style={{ color: '#021F69' }}
+                  style={{ color: '#0B2C72' }}
                 >
                   {item.id}
                 </div>
@@ -74,22 +73,22 @@ export default function WhyUsSection() {
                 <div className="flex justify-center lg:justify-start">
                   <div 
                     className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shadow-md"
-                    style={{ backgroundColor: '#7F95AF' }}
+                    style={{ backgroundColor: '#FFB703' }}
                   >
-                    <Icon className="w-7 h-7 sm:w-8 sm:h-8" style={{ color: '#FEFEFE' }} />
+                    <Icon className="w-7 h-7 sm:w-8 sm:h-8" style={{ color: '#FFFFFF' }} />
                   </div>
                 </div>
 
                 <h3 
                   className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight"
-                  style={{ color: '#021F69' }}
+                  style={{ color: '#0B2C72' }}
                 >
                   {item.title}
                 </h3>
 
                 <p 
                   className="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0"
-                  style={{ color: '#7F95AF' }}
+                  style={{ color: '#374151' }}
                 >
                   {item.description}
                 </p>
@@ -97,7 +96,7 @@ export default function WhyUsSection() {
                 <div className="flex justify-center lg:justify-start">
                   <div 
                     className="inline-block px-4 py-2 sm:px-6 sm:py-3 rounded-lg text-sm font-medium"
-                    style={{ backgroundColor: '#021F69', color: '#FEFEFE' }}
+                    style={{ backgroundColor: '#0B2C72', color: '#FFFFFF' }}
                   >
                     Solution {item.id}
                   </div>

@@ -51,15 +51,15 @@ export default function ServicesSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   return (
-    <section className="py-20 px-4" style={{backgroundColor: '#FEFEFE'}}>
+    <section className="py-20 px-4" style={{backgroundColor: '#FFFFFF'}}>
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-2 border-2 rounded-full font-medium text-sm mb-6"
-               style={{borderColor: '#021F69', color: '#021F69'}}>
+               style={{borderColor: '#0B2C72', color: '#0B2C72'}}>
             SERVICES
           </div>
-          <h2 className="text-2xl md:text-5xl font-semibold" style={{color: '#021F69'}}>
+          <h2 className="text-2xl md:text-5xl font-semibold" style={{color: '#0B2C72'}}>
             Voyons ce que nous allons faire.
           </h2>
         </div>
@@ -80,7 +80,7 @@ export default function ServicesSection() {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 {/* Card Container */}
-                <div className="relative h-80  overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   {/* Background Image */}
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out"
@@ -97,18 +97,20 @@ export default function ServicesSection() {
                   <div className="absolute inset-0 p-6 flex flex-col justify-between">
                     {/* Icon */}
                     <div className="flex justify-end">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
-                           style={{backgroundColor: '#021F69'}}>
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        isHovered ? 'transform scale-110' : ''
+                      }`}
+                           style={{backgroundColor: isHovered ? '#FFB703' : '#0B2C72'}}>
                         {isHovered ? (
-                          <ArrowUpRight className="w-6 h-6" style={{color: '#FEFEFE'}} />
+                          <ArrowUpRight className="w-6 h-6" style={{color: '#FFFFFF'}} />
                         ) : (
-                          <IconComponent className="w-6 h-6" style={{color: '#FEFEFE'}} />
+                          <IconComponent className="w-6 h-6" style={{color: '#FFFFFF'}} />
                         )}
                       </div>
                     </div>
 
                     {/* Text Content */}
-                    <div style={{color: '#FEFEFE'}}>
+                    <div style={{color: '#FFFFFF'}}>
                       <h3 className="text-xl font-bold mb-2">{service.title}</h3>
 
                       {/* Subtitle - appears on hover */}
@@ -119,7 +121,7 @@ export default function ServicesSection() {
                             : "opacity-0 transform translate-y-4 max-h-0"
                         }`}
                       >
-                        <p className="text-sm leading-relaxed" style={{color: '#7F95AF'}}>{service.subtitle}</p>
+                        <p className="text-sm leading-relaxed" style={{color: '#D1D5DB'}}>{service.subtitle}</p>
                       </div>
                     </div>
                   </div>

@@ -24,23 +24,6 @@ export default function ContactFormMap() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    } catch (error) {
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-      setTimeout(() => setSubmitStatus("idle"), 5000)
-    }
-  }
-
   const handleGetDirections = () => {
     const address = "Zone Industrielle, Yopougon, Abidjan, Côte d'Ivoire"
     const encodedAddress = encodeURIComponent(address)
@@ -56,118 +39,6 @@ export default function ContactFormMap() {
   return (
     <section className="bg-[#FEFEFE] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Contact Form Section */}
-        <div className="mb-16">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-[#7F95AF] text-sm font-semibold tracking-wide uppercase">★ CONTACTEZ-NOUS ★</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#021F69] mb-4">Nous sommes là pour vos projets</h2>
-            <div className="w-16 h-1 mx-auto mb-6 bg-[#7F95AF]"></div>
-            <p className="text-[#7F95AF] max-w-2xl mx-auto">
-              Remplissez ce formulaire pour vos demandes de devis, projets de construction ou questions techniques.
-            </p>
-          </div>
-
-          {/* Contact Form */}
-          <div className="max-w-4xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Name Field */}
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Votre nom complet"
-                    required
-                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#021F69] focus:border-transparent transition-all duration-200 placeholder-gray-500"
-                  />
-                </div>
-
-                {/* Email Field */}
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Adresse email"
-                    required
-                    className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#021F69] focus:border-transparent transition-all duration-200 placeholder-gray-500"
-                  />
-                </div>
-              </div>
-
-              {/* Subject Field */}
-              <div>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  placeholder="Objet de votre demande (Devis, Construction, Rénovation...)"
-                  required
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#021F69] focus:border-transparent transition-all duration-200 placeholder-gray-500"
-                />
-              </div>
-
-              {/* Message Field */}
-              <div>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Décrivez votre projet ou votre demande en détail..."
-                  required
-                  rows={6}
-                  className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#021F69] focus:border-transparent transition-all duration-200 placeholder-gray-500 resize-vertical"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <div className="text-center">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#021F69] text-[#FEFEFE] font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:bg-[#7F95AF] disabled:scale-100 disabled:opacity-70"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      ENVOI EN COURS...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-5 w-5" />
-                      ENVOYER LA DEMANDE
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {/* Status Messages */}
-              {submitStatus === "success" && (
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#021F69] text-[#FEFEFE] font-medium">
-                    ✓ Demande envoyée avec succès ! Nous vous répondrons sous 24h.
-                  </div>
-                </div>
-              )}
-
-              {submitStatus === "error" && (
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 text-white font-medium">
-                    ✗ Échec de l'envoi. Veuillez réessayer.
-                  </div>
-                </div>
-              )}
-            </form>
-          </div>
-        </div>
-
         {/* Map Section */}
         <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
           <div className="relative h-96 md:h-[500px]">
@@ -222,53 +93,6 @@ export default function ContactFormMap() {
                 <ExternalLink className="h-4 w-4" />
                 Itinéraire
               </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Contact Information */}
-        <div className="mt-12 text-center">
-          <div className="bg-gray-50 rounded-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-[#021F69] mb-4">Besoin d'un devis urgent ?</h3>
-            <p className="text-[#7F95AF] mb-6">
-              Pour les projets nécessitant une intervention rapide, n'hésitez pas à nous contacter directement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+22527451234"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold bg-[#021F69] text-[#FEFEFE] transition-all duration-300 hover:shadow-lg hover:bg-[#7F95AF]"
-              >
-                <Phone className="h-4 w-4" />
-                Appeler: +225 27 45 12 34
-              </a>
-              <a
-                href="mailto:projets@construction-btp.ci"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold bg-[#7F95AF] text-[#FEFEFE] transition-all duration-300 hover:shadow-lg hover:bg-[#021F69]"
-              >
-                <Mail className="h-4 w-4" />
-                Email: projets@construction-btp.ci
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Office Hours Section */}
-        <div className="mt-8 text-center">
-          <div className="bg-[#FEFEFE] border-2 border-[#7F95AF] rounded-lg p-6 max-w-xl mx-auto">
-            <h3 className="text-lg font-bold text-[#021F69] mb-4">Horaires d'ouverture</h3>
-            <div className="space-y-2 text-[#7F95AF]">
-              <div className="flex justify-between">
-                <span>Lundi - Vendredi:</span>
-                <span className="font-semibold text-[#021F69]">07h00 - 17h00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Samedi:</span>
-                <span className="font-semibold text-[#021F69]">08h00 - 13h00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Dimanche:</span>
-                <span className="font-semibold text-red-500">Fermé</span>
-              </div>
             </div>
           </div>
         </div>

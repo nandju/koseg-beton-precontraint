@@ -20,7 +20,7 @@ export default function AboutSection() {
           <div className="relative flex justify-center order-1 lg:order-1">
             <div className="relative">
               {/* Circular border */}
-              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-[#021F69] p-3 sm:p-4 bg-[#FEFEFE]/90 backdrop-blur-sm">
+              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full border-2 border-[#0B2C72] p-3 sm:p-4 bg-[#FFFFFF]/90 backdrop-blur-sm">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img
                     src="/assets/images/illustrations/page-accueil/founder-construction.jpg"
@@ -36,7 +36,7 @@ export default function AboutSection() {
                   <defs>
                     <path id="circle" d="M 200, 200 m -180, 0 a 180,180 0 1,1 360,0 a 180,180 0 1,1 -360,0" />
                   </defs>
-                  <text className="text-xs sm:text-sm font-medium fill-[#021F69]">
+                  <text className="text-xs sm:text-sm font-medium fill-[#FFB703]">
                     <textPath href="#circle" startOffset="0%">
                       25 ans d'expérience • 25 ans d'expérience •
                     </textPath>
@@ -51,11 +51,11 @@ export default function AboutSection() {
             {/* Badge and heading */}
             <div className="space-y-4 sm:space-y-6 text-start lg:text-left">
               <div className="inline-block">
-                <span className="px-4 py-2 border-2 border-[#021F69] text-[#021F69] rounded-full text-sm font-medium bg-[#FEFEFE]/90 backdrop-blur-sm">
+                <span className="px-4 py-2 border-2 border-[#0B2C72] text-[#0B2C72] rounded-full text-sm font-medium bg-[#FFFFFF]/90 backdrop-blur-sm">
                   À PROPOS
                 </span>
               </div>
-              <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-[#021F69] leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-[#0B2C72] leading-tight">
                 Construire vos visions.
                 <br />
                 Créer la réalité.
@@ -73,8 +73,8 @@ export default function AboutSection() {
                     key={category.name}
                     className={`p-4 sm:p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 backdrop-blur-sm ${
                       isHovered
-                        ? "bg-[#021F69] text-[#FEFEFE] transform scale-105"
-                        : "bg-[#FEFEFE]/90 text-[#021F69] hover:shadow-lg"
+                        ? "bg-[#FFB703] text-[#FFFFFF] transform scale-105 border-[#FFB703]"
+                        : "bg-[#FFFFFF]/90 text-[#0B2C72] hover:shadow-lg hover:border-[#0B2C72]"
                     }`}
                     onMouseEnter={() => setHoveredCategory(category.name)}
                     onMouseLeave={() => setHoveredCategory(null)}
@@ -92,15 +92,15 @@ export default function AboutSection() {
             </div>
 
             {/* Description */}
-            <p className="text-[#7F95AF] leading-relaxed text-start lg:text-left text-sm sm:text-base">
+            <p className="text-[#374151] leading-relaxed text-start lg:text-left text-sm sm:text-base">
               Notre mission est de transformer vos idées en réalisations durables, grâce à la post-tension et à une ingénierie de qualité.
             </p>
 
             {/* Founder signature */}
             <div className="flex items-center space-x-4 justify-start lg:justify-start">
               <div>
-                <h4 className="font-semibold text-[#021F69] text-sm sm:text-base">Mr COULIBALY ABDOULAYE</h4>
-                <p className="text-[#7F95AF] text-xs sm:text-sm">Fondateur</p>
+                <h4 className="font-semibold text-[#0B2C72] text-sm sm:text-base">Mr COULIBALY ABDOULAYE</h4>
+                <p className="text-[#374151] text-xs sm:text-sm">Fondateur</p>
               </div>
               <div className="ml-8">
                 <img src="/assets/images/illustrations/page-accueil/signature_2.png" alt="Signature" className="h-8 sm:h-12 w-auto" />
