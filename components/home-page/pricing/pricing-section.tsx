@@ -122,7 +122,8 @@ export default function PricingSection() {
                     <div
                       className="absolute inset-2 rounded-full transition-all duration-500 overflow-hidden"
                       style={{
-                        backgroundColor: '#F3EEE3',
+                        // backgroundColor: '#FFFFFF',
+                           backgroundColor: '#F3EEE3', //l'ancienne version
                         transform: isActive(sector.id) ? 'scale(0.95)' : 'scale(1)'
                       }}
                     >
