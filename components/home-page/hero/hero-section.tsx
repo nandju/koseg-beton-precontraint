@@ -1,5 +1,6 @@
 "use client"
 
+import { BlurFade } from "@/components/magicui/blur-fade"
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -53,7 +54,8 @@ export default function HeroSection() {
           style={{ backgroundColor: '#0B2C72' }}
         >
           {/* Badge */}
-          <div className="mb-8 sm:mb-12 lg:mb-16 overflow-hidden">
+          <BlurFade delay={0.2} direction="up" duration={0.8} inView>
+            <div className="mb-8 sm:mb-12 lg:mb-16 overflow-hidden">
             <div
               key={`badge-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_forwards]"
@@ -69,8 +71,11 @@ export default function HeroSection() {
               </span>
             </div>
           </div>
+          </BlurFade>
+          
           
           {/* Main Title */}
+          <BlurFade delay={0.4} direction="up" duration={0.8} inView>
           <div className="mb-8 sm:mb-12 lg:mb-16 overflow-hidden">
             <h1 
               key={`title-${currentSlide}`}
@@ -95,9 +100,11 @@ export default function HeroSection() {
               ))}
             </h1>
           </div>
+          </BlurFade>
           
           {/* Subtitle */}
-          <div className="mb-10 sm:mb-16 lg:mb-20 overflow-hidden">
+          <BlurFade delay={0.6} direction="up" duration={0.8} inView>
+            <div className="mb-10 sm:mb-16 lg:mb-20 overflow-hidden">
             <p 
               key={`subtitle-${currentSlide}`}
               className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-xl animate-[slideInUp_0.8s_ease-out_0.4s_both]"
@@ -106,9 +113,12 @@ export default function HeroSection() {
               {slides[currentSlide].subtitle}
             </p>
           </div>
+          </BlurFade>
+          
           
           {/* Button */}
-          <div className="mb-12 sm:mb-20 lg:mb-24 overflow-hidden">
+          <BlurFade delay={0.8} direction="up" duration={0.8} inView>
+            <div className="mb-12 sm:mb-20 lg:mb-24 overflow-hidden">
             <div
               key={`button-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_0.6s_both]"
@@ -126,10 +136,13 @@ export default function HeroSection() {
               </Button>
             </div>
           </div>
+          </BlurFade>
+          
 
           {/* Contact Info */}
           <div className="space-y-3 sm:space-y-4 lg:space-y-6 overflow-hidden">
-            <div
+            <BlurFade delay={1.0} direction="up" duration={0.8} inView>
+              <div
               key={`phone-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_0.8s_both]"
             >
@@ -137,7 +150,10 @@ export default function HeroSection() {
                 {slides[currentSlide].phone}
               </p>
             </div>
-            <div
+            </BlurFade>
+            
+            <BlurFade delay={1.2} direction="up" duration={0.8} inView>
+              <div
               key={`email-${currentSlide}`}
               className="animate-[slideInUp_0.8s_ease-out_1s_both]"
             >
@@ -145,13 +161,17 @@ export default function HeroSection() {
                 {slides[currentSlide].email}
               </p>
             </div>
+            </BlurFade>
+            
           </div>
         </div>
 
         {/* Right Section - Changing Image */}
+        
         <div className="w-full lg:w-1/2 relative overflow-hidden h-64 sm:h-96 lg:h-auto min-h-[400px] lg:min-h-screen" style={{ backgroundColor: '#F3EEE3' }}>
           
           {/* Background watermark text - Hidden on mobile */}
+          
           <div 
             className="absolute inset-0 items-center justify-center opacity-20 pointer-events-none z-10 hidden lg:flex"
             style={{ color: '#0B2C72' }}

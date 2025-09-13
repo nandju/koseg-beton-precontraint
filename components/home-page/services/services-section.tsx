@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Building2, Compass, Home, ClipboardList, Hammer, Focus, ArrowUpRight } from "lucide-react"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 const services = [
   {
@@ -55,78 +56,91 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-2 border-2 rounded-full font-medium text-sm mb-6"
-               style={{borderColor: '#0B2C72', color: '#0B2C72'}}>
-            SERVICES
-          </div>
-          <h2 className="text-2xl md:text-5xl font-semibold" style={{color: '#0B2C72'}}>
-            Voyons ce que nous allons faire.
-          </h2>
+          <BlurFade delay={0.2} direction="up" duration={0.6} inView>
+            <div className="inline-block px-6 py-2 border-2 rounded-full font-medium text-sm mb-6"
+                 style={{borderColor: '#0B2C72', color: '#0B2C72'}}>
+              SERVICES
+            </div>
+          </BlurFade>
+          
+          <BlurFade delay={0.4} direction="up" duration={0.8} inView>
+            <h2 className="text-2xl md:text-5xl font-semibold" style={{color: '#0B2C72'}}>
+              Voyons ce que nous allons faire.
+            </h2>
+          </BlurFade>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const IconComponent = service.icon
             const isHovered = hoveredCard === service.id
 
             return (
-              <div
+              <BlurFade 
                 key={service.id}
-                className={`relative group cursor-pointer transition-all duration-500 ease-out ${
-                  isHovered ? "scale-105" : "scale-100"
-                }`}
-                onMouseEnter={() => setHoveredCard(service.id)}
-                onMouseLeave={() => setHoveredCard(null)}
+                delay={0.6 + (index * 0.15)} 
+                direction="up" 
+                duration={0.8} 
+                inView
+                inViewMargin="-50px"
               >
-                {/* Card Container */}
-                <div className="relative h-80 overflow-hidden">
-                  {/* Background Image */}
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out"
-                    style={{
-                      backgroundImage: `url(${service.image})`,
-                      transform: isHovered ? "scale(1.1)" : "scale(1)",
-                    }}
-                  />
+                <div
+                  className={`relative group cursor-pointer transition-all duration-500 ease-out ${
+                    isHovered ? "scale-105" : "scale-100"
+                  }`}
+                  onMouseEnter={() => setHoveredCard(service.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  {/* Card Container */}
+                  <div className="relative h-80 overflow-hidden">
+                    {/* Background Image */}
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out"
+                      style={{
+                        backgroundImage: `url(${service.image})`,
+                        transform: isHovered ? "scale(1.1)" : "scale(1)",
+                      }}
+                    />
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-                  {/* Content */}
-                  <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                    {/* Icon */}
-                    <div className="flex justify-end">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isHovered ? 'transform scale-110' : ''
-                      }`}
-                           style={{backgroundColor: isHovered ? '#FFB703' : '#0B2C72'}}>
-                        {isHovered ? (
-                          <ArrowUpRight className="w-6 h-6" style={{color: '#FFFFFF'}} />
-                        ) : (
-                          <IconComponent className="w-6 h-6" style={{color: '#FFFFFF'}} />
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Text Content */}
-                    <div style={{color: '#FFFFFF'}}>
-                      <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-
-                      {/* Subtitle - appears on hover */}
-                      <div
-                        className={`transition-all duration-300 ease-out ${
-                          isHovered
-                            ? "opacity-100 transform translate-y-0 max-h-20"
-                            : "opacity-0 transform translate-y-4 max-h-0"
+                    {/* Content */}
+                    <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                      {/* Icon */}
+                      <div className="flex justify-end">
+                        <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          isHovered ? 'transform scale-110' : ''
                         }`}
-                      >
-                        <p className="text-sm leading-relaxed" style={{color: '#D1D5DB'}}>{service.subtitle}</p>
+                             style={{backgroundColor: isHovered ? '#FFB703' : '#0B2C72'}}>
+                          {isHovered ? (
+                            <ArrowUpRight className="w-6 h-6" style={{color: '#FFFFFF'}} />
+                          ) : (
+                            <IconComponent className="w-6 h-6" style={{color: '#FFFFFF'}} />
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Text Content */}
+                      <div style={{color: '#FFFFFF'}}>
+                        <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+
+                        {/* Subtitle - appears on hover */}
+                        <div
+                          className={`transition-all duration-300 ease-out ${
+                            isHovered
+                              ? "opacity-100 transform translate-y-0 max-h-20"
+                              : "opacity-0 transform translate-y-4 max-h-0"
+                          }`}
+                        >
+                          <p className="text-sm leading-relaxed" style={{color: '#D1D5DB'}}>{service.subtitle}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </BlurFade>
             )
           })}
         </div>

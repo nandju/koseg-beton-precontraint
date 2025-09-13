@@ -1,61 +1,75 @@
 "use client"
 
+import { BlurFade } from "@/components/magicui/blur-fade"
+
 export default function ContactSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Animated diagonal lines strip */}
-      <div className="h-8 bg-[#374151] overflow-hidden relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="animate-scroll-left flex whitespace-nowrap">
-            {/* Repeat diagonal lines pattern */}
-            {Array.from({ length: 50 }).map((_, i) => (
-              <div key={i} className="flex items-center">
-                <div className="w-6 h-0.5 bg-[#FFB703] transform rotate-45 mx-2"></div>
-              </div>
-            ))}
+      <BlurFade delay={0.1} direction="down" duration={0.8} inView>
+        <div className="h-8 bg-[#374151] overflow-hidden relative">
+          <div className="absolute inset-0 flex items-center">
+            <div className="animate-scroll-left flex whitespace-nowrap">
+              {/* Repeat diagonal lines pattern */}
+              {Array.from({ length: 50 }).map((_, i) => (
+                <div key={i} className="flex items-center">
+                  <div className="w-6 h-0.5 bg-[#FFB703] transform rotate-45 mx-2"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </BlurFade>
 
       {/* Main contact section */}
       <div className="relative min-h-[400px] bg-gradient-to-br from-[#0B2C72] via-[#374151] to-[#0B2C72]">
         {/* Background image with overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/assets/images/backgrounds/backgroundc.png')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0B2C72]/80 via-[#374151]/70 to-[#0B2C72]/80"></div>
-        </div>
+        <BlurFade delay={0.2} direction="up" duration={1.2} blur="8px" inView>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url('/assets/images/backgrounds/backgroundc.png')`,
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0B2C72]/80 via-[#374151]/70 to-[#0B2C72]/80"></div>
+          </div>
+        </BlurFade>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-12 text-center">
           {/* Contact badge */}
-          <div className="inline-flex items-center justify-center mb-8">
-            <span className="px-6 py-2 border-2 border-[#FFFFFF]/30 rounded-full text-[#FFFFFF] text-sm font-medium tracking-wider uppercase">
-              Contactez-nous
-            </span>
-          </div>
+          <BlurFade delay={0.4} direction="up" duration={0.8} inView>
+            <div className="inline-flex items-center justify-center mb-8">
+              <span className="px-6 py-2 border-2 border-[#FFFFFF]/30 rounded-full text-[#FFFFFF] text-sm font-medium tracking-wider uppercase">
+                Contactez-nous
+              </span>
+            </div>
+          </BlurFade>
 
           {/* Main heading */}
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-[#FFFFFF] mb-8 leading-tight">
-            {"Construisons quelque chose d'exceptionnel."}
-          </h2>
+          <BlurFade delay={0.6} direction="up" duration={1.0} inView>
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-[#FFFFFF] mb-8 leading-tight">
+              {"Construisons quelque chose d'exceptionnel."}
+            </h2>
+          </BlurFade>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-[#FFFFFF]/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Contactez-nous dès aujourd'hui et donnons vie à vos idées, avec expertise, innovation et passion.
-          </p>
+          <BlurFade delay={0.8} direction="up" duration={0.8} inView>
+            <p className="text-lg md:text-xl text-[#FFFFFF]/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Contactez-nous dès aujourd'hui et donnons vie à vos idées, avec expertise, innovation et passion.
+            </p>
+          </BlurFade>
 
           {/* More Details button */}
-          <button className="inline-flex items-center gap-3 bg-[#FFB703] text-[#FFFFFF] px-8 py-3 rounded-full font-medium text-lg hover:bg-[#FFB703]/90 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-          >
-            Plus de détails
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-            </svg>
-          </button>
+          <BlurFade delay={1.0} direction="up" duration={0.8} inView>
+            <button className="inline-flex items-center gap-3 bg-[#FFB703] text-[#FFFFFF] px-8 py-3 rounded-full font-medium text-lg hover:bg-[#FFB703]/90 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              Plus de détails
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </button>
+          </BlurFade>
         </div>
       </div>
 
