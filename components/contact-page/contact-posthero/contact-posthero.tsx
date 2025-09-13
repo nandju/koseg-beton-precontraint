@@ -64,7 +64,7 @@ export default function ContactSection() {
   return (
     <section 
       className="py-16 px-6"
-      style={{ backgroundColor: '#FEFEFE' }}
+      style={{ backgroundColor: '#F3EEE3' }}
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -72,40 +72,40 @@ export default function ContactSection() {
           {/* Section Gauche - Informations de contact */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold mb-4" style={{ color: '#021F69' }}>
+              <h2 className="text-4xl font-bold mb-4" style={{ color: '#0B2C72' }}>
                 Contactez-nous
               </h2>
-              <p className="text-lg" style={{ color: '#7F95AF' }}>
+              <p className="text-lg" style={{ color: '#374151' }}>
                 Prenez rendez-vous avec nous pour construire votre parcours de conception.
               </p>
             </div>
 
             <div className="space-y-8">
               <div>
-                <h3 className="text-lg font-semibold mb-3" style={{ color: '#021F69' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#0B2C72' }}>
                   Appelez-nous maintenant
                 </h3>
-                <div style={{ color: '#7F95AF' }} className="space-y-1">
+                <div style={{ color: '#374151' }} className="space-y-1">
                   <p>Parlons ensemble et voyons comment nous pouvons</p>
                   <p>travailler ensemble +225 27 45 12 34</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3" style={{ color: '#021F69' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#0B2C72' }}>
                   Votre Message
                 </h3>
-                <div style={{ color: '#7F95AF' }} className="space-y-1">
+                <div style={{ color: '#374151' }} className="space-y-1">
                   <p>Nous répondons généralement dans les 24 heures</p>
                   <p>projets@construction-btp.ci</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3" style={{ color: '#021F69' }}>
+                <h3 className="text-lg font-semibold mb-3" style={{ color: '#0B2C72' }}>
                   Votre Localisation
                 </h3>
-                <p style={{ color: '#7F95AF' }}>
+                <p style={{ color: '#374151' }}>
                   Zone Industrielle, Yopougon, Abidjan, Côte d'Ivoire
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function ContactSection() {
 
           {/* Section Droite - Formulaire */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold mb-6" style={{ color: '#021F69' }}>
+            <h3 className="text-2xl font-bold mb-6" style={{ color: '#0B2C72' }}>
               Envoyez-nous un message
             </h3>
             
@@ -132,7 +132,7 @@ export default function ContactSection() {
                     // onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all"
-                    style={{ borderColor: '#E5E7EB' }}
+                    style={{ borderColor: '#D1D5DB' }}
                   />
                 </div>
                 <div>
@@ -144,7 +144,7 @@ export default function ContactSection() {
                     // onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all"
-                    style={{ borderColor: '#E5E7EB' }}
+                    style={{ borderColor: '#D1D5DB' }}
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function ContactSection() {
                     value={formData.phone}
                     // onChange={handleInputChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all"
-                    style={{ borderColor: '#E5E7EB' }}
+                    style={{ borderColor: '#D1D5DB' }}
                   />
                 </div>
                 <div>
@@ -171,7 +171,7 @@ export default function ContactSection() {
                     // onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all"
-                    style={{ borderColor: '#E5E7EB' }}
+                    style={{ borderColor: '#D1D5DB' }}
                   />
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default function ContactSection() {
                   // onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 transition-all resize-none"
-                  style={{ borderColor: '#E5E7EB' }}
+                  style={{ borderColor: '#D1D5DB' }}
                 />
               </div>
 
@@ -200,9 +200,9 @@ export default function ContactSection() {
                   // onChange={handleInputChange}
                   required
                   className="mt-1 h-4 w-4 rounded border-gray-300"
-                  style={{ accentColor: '#021F69' }}
+                  style={{ accentColor: '#0B2C72' }}
                 />
-                <label htmlFor="agreeTerms" className="text-sm" style={{ color: '#7F95AF' }}>
+                <label htmlFor="agreeTerms" className="text-sm" style={{ color: '#374151' }}>
                   J'accepte vos conditions générales et conditions tempor aliqua.
                 </label>
               </div>
@@ -224,7 +224,7 @@ export default function ContactSection() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full md:w-auto px-8 py-3 rounded-full text-white font-medium hover:opacity-90 hover:transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                  style={{ backgroundColor: '#021F69' }}
+                  style={{ backgroundColor: '#FFB703' }}
                 >
                   <span>{isSubmitting ? 'Envoi...' : 'Commencer'}</span>
                   {!isSubmitting && (
@@ -253,8 +253,8 @@ export default function ContactSection() {
       <style jsx>{`
         input:focus,
         textarea:focus {
-          border-color: #021F69 !important;
-          box-shadow: 0 0 0 3px rgba(2, 31, 105, 0.1);
+          border-color: #0B2C72 !important;
+          box-shadow: 0 0 0 3px rgba(11, 44, 114, 0.1);
         }
 
         input::placeholder,
@@ -263,7 +263,7 @@ export default function ContactSection() {
         }
 
         button:hover:not(:disabled) {
-          box-shadow: 0 4px 12px rgba(255, 107, 71, 0.3);
+          box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
         }
 
         @media (max-width: 768px) {

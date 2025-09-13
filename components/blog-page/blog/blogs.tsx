@@ -58,17 +58,17 @@ const ConstructionBlog = () => {
 
   const getCategoryColor = (category:string) => {
     const colors: { [key: string]: string } = {
-      'Usine': '#021F69',
-      'Commercial': '#7F95AF',
-      'Résidentiel': '#021F69',
-      'Rénovation': '#7F95AF',
-      'Remplacement de Toit': '#021F69'
+      'Usine': '#0B2C72',
+      'Commercial': '#374151',
+      'Résidentiel': '#0B2C72',
+      'Rénovation': '#374151',
+      'Remplacement de Toit': '#0B2C72'
     };
-    return colors[category] || '#7F95AF';
+    return colors[category] || '#374151';
   };
 
   return (
-    <div className="min-h-screen bg-[#FEFEFE]">
+    <div className="min-h-screen bg-[#F3EEE3]">
       
 
       {/* Articles Grid */}
@@ -81,6 +81,7 @@ const ConstructionBlog = () => {
                 className="group relative overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer border border-gray-100"
                 onMouseEnter={() => setHoveredCard(article.id)}
                 onMouseLeave={() => setHoveredCard(null)}
+                style={{ borderColor: '#D1D5DB' }}
               >
                 {/* Image Container */}
                 <div className="relative h-64 overflow-hidden">
@@ -99,10 +100,10 @@ const ConstructionBlog = () => {
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className={`absolute inset-0 bg-[#021F69] bg-opacity-90 flex items-center justify-center transition-all duration-300 ${
+                  <div className={`absolute inset-0 bg-[#0B2C72] bg-opacity-90 flex items-center justify-center transition-all duration-300 ${
                     hoveredCard === article.id ? 'opacity-100' : 'opacity-0'
                   }`}>
-                    <button className="bg-[#7F95AF] hover:bg-[#6A8099] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2">
+                    <button className="bg-[#FFB703] hover:bg-[#E5A503] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2">
                       Lire plus
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -111,16 +112,16 @@ const ConstructionBlog = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#021F69] mb-3 line-clamp-3 leading-tight">
+                  <h3 className="text-lg font-bold text-[#0B2C72] mb-3 line-clamp-3 leading-tight">
                     {article.title}
                   </h3>
                   
-                  <p className="text-[#7F95AF] text-sm mb-4 line-clamp-2">
+                  <p className="text-[#374151] text-sm mb-4 line-clamp-2">
                     {article.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-[#021F69] text-sm font-medium">
+                    <span className="text-[#0B2C72] text-sm font-medium">
                       {article.date}
                     </span>
                   </div>
