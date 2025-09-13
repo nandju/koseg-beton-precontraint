@@ -58,7 +58,7 @@ const AboutSection = () => {
   const activeTabData = tabs.find(tab => tab.id === activeTab)
 
   return (
-    <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FEFEFE' }}>
+    <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F3EEE3' }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
@@ -75,9 +75,9 @@ const AboutSection = () => {
               {/* ISO Certification Badge */}
               <div className="absolute top-4 right-4 bg-white rounded-full p-4 shadow-lg">
                 <div className="text-center">
-                  <CheckCircle className="w-8 h-8 mx-auto mb-2" style={{ color: '#021F69' }} />
-                  <div className="text-sm font-bold" style={{ color: '#021F69' }}>ISO 9001</div>
-                  <div className="text-xs font-semibold px-2 py-1 rounded text-white" style={{ backgroundColor: '#7F95AF' }}>
+                  <CheckCircle className="w-8 h-8 mx-auto mb-2" style={{ color: '#0B2C72' }} />
+                  <div className="text-sm font-bold" style={{ color: '#0B2C72' }}>ISO 9001</div>
+                  <div className="text-xs font-semibold px-2 py-1 rounded text-white" style={{ backgroundColor: '#374151' }}>
                     CERTIFIÉ
                   </div>
                 </div>
@@ -98,12 +98,12 @@ const AboutSection = () => {
           <div className="space-y-8">
             
             {/* About Label */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full border-2" style={{ borderColor: '#021F69', color: '#021F69' }}>
+            <div className="inline-flex items-center px-4 py-2 rounded-full border-2" style={{ borderColor: '#0B2C72', color: '#0B2C72' }}>
               <span className="text-sm font-medium uppercase tracking-wide">À PROPOS</span>
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight" style={{ color: '#021F69' }}>
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight" style={{ color: '#0B2C72' }}>
               Engagés pour une qualité et des résultats supérieurs.
             </h2>
 
@@ -119,14 +119,14 @@ const AboutSection = () => {
                       : 'hover:shadow-sm'
                   }`}
                   style={{
-                    backgroundColor: activeTab === tab.id ? '#021F69' : 'white',
-                    color: activeTab === tab.id ? 'white' : '#021F69',
-                    border: `1px solid ${activeTab === tab.id ? '#021F69' : '#7F95AF'}`
+                    backgroundColor: activeTab === tab.id ? '#0B2C72' : '#FFFFFF',
+                    color: activeTab === tab.id ? '#FFFFFF' : '#0B2C72',
+                    border: `1px solid ${activeTab === tab.id ? '#0B2C72' : '#374151'}`
                   }}
                 >
                   <span className={`text-sm font-bold ${
                     activeTab === tab.id ? 'opacity-100' : 'opacity-60'
-                  }`} style={{ color: activeTab === tab.id ? '#FEFEFE' : '#7F95AF' }}>
+                  }`} style={{ color: activeTab === tab.id ? '#FFFFFF' : '#374151' }}>
                     {tab.number}
                   </span>
                   <span className="font-medium text-sm sm:text-base">{tab.title}</span>
@@ -136,11 +136,11 @@ const AboutSection = () => {
 
             {/* Tab Content */}
             <div className="space-y-6">
-              <h3 className="text-xl lg:text-2xl font-bold leading-tight" style={{ color: '#021F69' }}>
+              <h3 className="text-xl lg:text-2xl font-bold leading-tight" style={{ color: '#0B2C72' }}>
                 {activeTabData?.content.title}
               </h3>
               
-              <p className="text-base lg:text-lg leading-relaxed" style={{ color: '#7F95AF' }}>
+              <p className="text-base lg:text-lg leading-relaxed" style={{ color: '#374151' }}>
                 {activeTabData?.content.description}
               </p>
 
@@ -148,8 +148,8 @@ const AboutSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {activeTabData?.content.highlights.map((highlight, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: '#021F69' }} />
-                    <span className="text-sm lg:text-base" style={{ color: '#7F95AF' }}>{highlight}</span>
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" style={{ color: '#0B2C72' }} />
+                    <span className="text-sm lg:text-base" style={{ color: '#374151' }}>{highlight}</span>
                   </div>
                 ))}
               </div>
@@ -157,12 +157,12 @@ const AboutSection = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md" style={{ color: '#021F69', border: '2px solid #021F69' }}>
+              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md" style={{ color: '#0B2C72', border: '2px solid #0B2C72' }}>
                 <span>Découvrir Notre Histoire</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               
-              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-300 hover:shadow-lg hover:scale-105" style={{ backgroundColor: '#021F69' }}>
+              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-300 hover:shadow-lg hover:scale-105" style={{ backgroundColor: '#FFB703' }}>
                 <span>Commencer</span>
                 <ArrowRight className="w-4 h-4" />
               </button>

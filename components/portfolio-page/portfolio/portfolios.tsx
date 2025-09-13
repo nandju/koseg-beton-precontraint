@@ -32,13 +32,13 @@ const projects = [
     image: '/assets/images/illustrations/page-portfolios/project-4.jpg',
     category: 'Usine',
     title: 'Concepts Bâtiments Extérieurs',
-    description: "Dalles précontraintes et systèmes de post-tension pour tours commerciales, maximisant l'espace utile et réduisant l'épaisseur des planchers.",
+    description: "Dalles préconstraintes et systèmes de post-tension pour tours commerciales, maximisant l'espace utile et réduisant l'épaisseur des planchers.",
   }
 ];
 
 
   return (
-    <div className="min-h-screen bg-[#FEFEFE]">
+    <div className="min-h-screen bg-[#F3EEE3]">
       
 
       {/* Portfolio Grid */}
@@ -55,7 +55,7 @@ const projects = [
               >
                 {/* Image Container */}
                 <div className="relative h-80 md:h-96 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-[#7F95AF] to-[#021F69] opacity-20 absolute inset-0 z-10"></div>
+                  <div className="w-full h-full bg-gradient-to-br from-[#FFB703] to-[#0B2C72] opacity-20 absolute inset-0 z-10"></div>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -63,7 +63,7 @@ const projects = [
                   />
                   
                   {/* Overlay on Hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-[#021F69] to-transparent opacity-0 transition-all duration-500 z-20 ${
+                  <div className={`absolute inset-0 bg-gradient-to-t from-[#0B2C72] to-transparent opacity-0 transition-all duration-500 z-20 ${
                     hoveredCard === project.id ? 'opacity-90' : ''
                   }`}>
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
@@ -90,7 +90,7 @@ const projects = [
                   <h3 className="text-xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <span className="text-sm text-[#7F95AF]">
+                  <span className="text-sm text-[#FFB703]">
                     {project.category}
                   </span>
                 </div>

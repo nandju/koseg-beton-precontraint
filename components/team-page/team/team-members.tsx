@@ -97,14 +97,14 @@ export default function TeamMembers() {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null)
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F3EEE3]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4" style={{ color: '#0B2C72' }}>
+          <h2 className="text-4xl font-bold mb-4 text-[#0B2C72]">
             Notre Équipe
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#374151] max-w-2xl mx-auto">
             Découvrez les experts qui font de KOSEG un leader dans le secteur de la construction
           </p>
         </div>
@@ -119,7 +119,7 @@ export default function TeamMembers() {
               onMouseLeave={() => setHoveredMember(null)}
             >
               {/* Team Member Card */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="bg-[#FFFFFF] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-[#D1D5DB]">
                 {/* Member Image */}
                 <div className="aspect-square overflow-hidden relative">
                   <img
@@ -130,12 +130,11 @@ export default function TeamMembers() {
                   
                   {/* Social Media Overlay - Appears on Hover */}
                   <div 
-                    className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
+                    className={`absolute inset-0 bg-[#0B2C72]/90 flex items-center justify-center transition-all duration-300 ${
                       hoveredMember === member.id 
                         ? 'opacity-100 visible' 
                         : 'opacity-0 invisible'
                     }`}
-                    style={{ backgroundColor: 'rgba(11, 44, 114, 0.9)' }}
                   >
                     {member.socials.length > 0 && (
                       <div className="flex space-x-4">
@@ -145,8 +144,7 @@ export default function TeamMembers() {
                             <a
                               key={index}
                               href={social.href}
-                              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-all duration-300 transform hover:scale-110 shadow-lg"
-                              style={{ color: '#0B2C72' }}
+                              className="w-12 h-12 bg-[#FFFFFF] rounded-full flex items-center justify-center text-[#0B2C72] hover:bg-[#FFB703] hover:text-[#FFFFFF] transition-all duration-300 transform hover:scale-110 shadow-lg"
                             >
                               <IconComponent className="w-5 h-5" />
                             </a>
@@ -159,13 +157,10 @@ export default function TeamMembers() {
 
                 {/* Member Info */}
                 <div className="p-6 text-center">
-                  <h3 
-                    className="text-xl font-bold mb-2" 
-                    style={{ color: '#0B2C72' }}
-                  >
+                  <h3 className="text-xl font-bold mb-2 text-[#0B2C72]">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 font-medium text-sm">
+                  <p className="text-[#374151] font-medium text-sm">
                     {member.role}
                   </p>
                 </div>

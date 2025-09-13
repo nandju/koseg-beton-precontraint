@@ -37,7 +37,7 @@ export default function ContactFormMap() {
   }
 
   return (
-    <section className="bg-[#FEFEFE] py-20">
+    <section className="bg-[#F3EEE3] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Map Section */}
         <div className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
@@ -59,23 +59,23 @@ export default function ContactFormMap() {
             {/* Map Info Overlay */}
             <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-xs">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[#021F69] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-4 w-4 text-[#FEFEFE]" />
+                <div className="w-8 h-8 rounded-full bg-[#0B2C72] flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-4 w-4 text-[#FFFFFF]" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#021F69] text-sm">Construction BTP</h3>
-                  <p className="text-[#7F95AF] text-xs mb-2">Zone Industrielle, Yopougon</p>
+                  <h3 className="font-bold text-[#0B2C72] text-sm">Construction BTP</h3>
+                  <p className="text-[#374151] text-xs mb-2">Zone Industrielle, Yopougon</p>
                   <div className="flex gap-2">
                     <button
                       onClick={handleGetDirections}
-                      className="text-[#021F69] hover:text-[#7F95AF] text-xs font-medium transition-colors"
+                      className="text-[#0B2C72] hover:text-[#FFB703] text-xs font-medium transition-colors"
                     >
                       Itinéraire
                     </button>
                     <span className="text-gray-400 text-xs">•</span>
                     <button
                       onClick={handleViewLargerMap}
-                      className="text-[#021F69] hover:text-[#7F95AF] text-xs font-medium transition-colors"
+                      className="text-[#0B2C72] hover:text-[#FFB703] text-xs font-medium transition-colors"
                     >
                       Carte plus grande
                     </button>
@@ -88,7 +88,7 @@ export default function ContactFormMap() {
             <div className="absolute bottom-4 right-4 flex flex-col gap-2">
               <button
                 onClick={handleGetDirections}
-                className="flex items-center gap-2 px-4 py-2 bg-[#021F69] text-[#FEFEFE] font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:bg-[#7F95AF]"
+                className="flex items-center gap-2 px-4 py-2 bg-[#0B2C72] text-[#FFFFFF] font-semibold rounded-lg transition-all duration-200 hover:shadow-lg hover:bg-[#FFB703]"
               >
                 <ExternalLink className="h-4 w-4" />
                 Itinéraire

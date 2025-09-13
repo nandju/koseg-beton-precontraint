@@ -24,7 +24,7 @@ export default function PortfoliosHero() {
 
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center justify-center space-x-2 text-lg sm:text-xl">
-          <Link href="/" className="hover:text-[#7F95AF] transition-colors duration-300">
+          <Link href="/" className="hover:text-[#FFB703] transition-colors duration-300">
             Accueil
           </Link>
           <ChevronRight className="w-5 h-5 text-white/70" />
