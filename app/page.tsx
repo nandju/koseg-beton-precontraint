@@ -12,11 +12,12 @@ import StatisticsSection from "@/components/home-page/statistics/statistics-sect
 // import Head from "@/components/home-page/why-us/head";
 import WhyUsSection from "@/components/home-page/why-us/why-us-section";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
-import { AnimatedGridPatternDemoFaq } from '../components/home-page/faq/animated-grid-pattern.-background';
+// import { AnimatedGridPatternDemoFaq } from '../components/home-page/faq/animated-grid-pattern.-background';
 // import { Testimonials } from "@/components/home-page/testimonials/testimonials";
 import NewsSection from "@/components/home-page/news/news-section";
 import TestimonialsSection from "@/components/home-page/testimonialsV2/testimonials-section";
 import PricingSection from "@/components/home-page/pricing/pricing-section";
+import { AnimatedGridPatternDemoFaq } from "@/components/home-page/faq/animated-grid-pattern.-background";
 
 
 

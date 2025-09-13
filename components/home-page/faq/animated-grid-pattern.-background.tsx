@@ -5,7 +5,7 @@ import FaqSection from "./faq-section";
 
 export function AnimatedGridPatternDemoFaq() {
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-[#FEFEFE]">
+    <div className="relative flex w-full items-center justify-center overflow-hidden rounded-lg border bg-[#F3EEE3]">
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.1}

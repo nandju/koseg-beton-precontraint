@@ -80,18 +80,18 @@ export default function StatisticsSection() {
   }, [isVisible])
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-[#FEFEFE]">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-[#F3EEE3]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {statistics.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="mb-4">
-                <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#021F69] leading-none">
+                <span className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#0B2C72] leading-none">
                   <AnimatedCounter targetNumber={stat.number} isVisible={isVisible} />
                 </span>
-                <span className="text-lg md:text-xl font-semibold text-[#021F69] ml-2">+{stat.label}</span>
+                <span className="text-lg md:text-xl font-semibold text-[#FFB703] ml-2">+{stat.label}</span>
               </div>
-              <p className="text-[#7F95AF] text-sm md:text-base leading-relaxed max-w-xs mx-auto">{stat.description}</p>
+              <p className="text-[#374151] text-sm md:text-base leading-relaxed max-w-xs mx-auto">{stat.description}</p>
             </div>
           ))}
         </div>

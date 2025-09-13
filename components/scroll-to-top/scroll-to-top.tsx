@@ -33,12 +33,12 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#021F69] hover:bg-[#7F95AF] text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center group"
+      className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#0B2C72] hover:bg-[#FFB703] text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center group"
       style={{
-        background: `conic-gradient(#021F69 ${scrollProgress * 3.6}deg, rgba(127, 149, 175, 0.2) ${scrollProgress * 3.6}deg)`,
+        background: `conic-gradient(#FFB703 ${scrollProgress * 3.6}deg, rgba(209, 213, 219, 0.3) ${scrollProgress * 3.6}deg)`,
       }}
     >
-      <div className="w-10 h-10 bg-[#021F69] group-hover:bg-[#7f95af] rounded-full flex items-center justify-center transition-colors">
+      <div className="w-10 h-10 bg-[#0B2C72] group-hover:bg-[#FFB703] rounded-full flex items-center justify-center transition-colors">
         <ChevronUp className="w-5 h-5" />
       </div>
     </button>

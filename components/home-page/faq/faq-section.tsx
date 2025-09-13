@@ -42,19 +42,19 @@ export default function FaqSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 border-2 border-[#021F69] text-[#021F69] text-sm font-medium rounded-full">
+            <div className="inline-block px-4 py-2 border-2 border-[#0B2C72] text-[#0B2C72] text-sm font-medium rounded-full">
               FAQ
             </div>
 
-            <h2 className="text-2xl md:text-5xl font-semibold text-[#021F69] leading-tight">
+            <h2 className="text-2xl md:text-5xl font-semibold text-[#0B2C72] leading-tight">
               Engagés dans des services de toiture de haute qualité
             </h2>
 
-            <p className="text-[#7F95AF] text-lg leading-relaxed">
+            <p className="text-[#374151] text-lg leading-relaxed">
               Nous installons des chaudières et des systèmes de chauffage depuis plus de 10 ans et sommes fiers de dire que nous sommes experts dans ce domaine. Nous avons une équipe d'ingénieurs Gas Safe qualifiés créatifs
             </p>
 
-            <button className="inline-flex items-center gap-2 bg-[#7F95AF] hover:bg-[#7F95AF]/80 text-[#FEFEFE] px-8 py-4 rounded-full font-medium transition-colors duration-300">
+            <button className="inline-flex items-center gap-2 bg-[#FFB703] hover:bg-[#FFB703]/80 text-[#FFFFFF] px-8 py-4 rounded-full font-medium transition-colors duration-300">
               Lire Plus
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -67,19 +67,19 @@ export default function FaqSection() {
             {faqData.map((faq) => (
               <div
                 key={faq.id}
-                className="bg-[#FEFEFE] rounded-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md"
+                className="bg-[#FFFFFF] rounded-lg border border-[#D1D5DB] overflow-hidden transition-all duration-300 hover:shadow-md"
               >
                 <button
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-[#F3EEE3] transition-colors duration-200"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-[#7F95AF] font-bold text-lg">{faq.id}.</span>
-                    <h3 className="text-[#021F69] font-semibold text-lg">{faq.question}</h3>
+                    <span className="text-[#FFB703] font-bold text-lg">{faq.id}.</span>
+                    <h3 className="text-[#0B2C72] font-semibold text-lg">{faq.question}</h3>
                   </div>
 
                   <div className="flex-shrink-0 ml-4">
-                    <div className="w-8 h-8 bg-[#7F95AF] rounded-full flex items-center justify-center text-[#FEFEFE] transition-transform duration-200">
+                    <div className="w-8 h-8 bg-[#FFB703] rounded-full flex items-center justify-center text-[#FFFFFF] transition-transform duration-200">
                       {openFaq === faq.id ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function FaqSection() {
                 >
                   <div className="px-6 pb-6">
                     <div className="pl-8">
-                      <p className="text-[#7F95AF] leading-relaxed">{faq.answer}</p>
+                      <p className="text-[#374151] leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 </div>

@@ -83,13 +83,13 @@ export default function TestimonialsSection() {
             backgroundImage: `url('/assets/images/backgrounds/background-silhouette.png')`,
           }}
         />
-        <div className="absolute inset-0 bg-[#021F69]/80" />
+        <div className="absolute inset-0 bg-[#0B2C72]/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#7F95AF] mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#FFB703] mb-4">
             Que disent les gens de
             <br />
             nos services?
@@ -115,13 +115,13 @@ export default function TestimonialsSection() {
                 <div
                   className={`rounded-2xl p-6 text-center transition-all duration-1000 ${
                     isCenter 
-                      ? "bg-[#7F95AF] text-[#FEFEFE] shadow-2xl min-h-[400px]" 
-                      : "bg-[#FEFEFE]/90 text-[#021F69] shadow-lg min-h-[350px] opacity-75"
+                      ? "bg-[#FFB703] text-[#FFFFFF] shadow-2xl min-h-[400px]" 
+                      : "bg-[#FFFFFF]/90 text-[#0B2C72] shadow-lg min-h-[350px] opacity-75"
                   } flex flex-col justify-between`}
                 >
                   {/* Profile Image */}
                   <div className={`mx-auto rounded-full overflow-hidden mb-4 border-4 ${
-                    isCenter ? "w-20 h-20 border-[#FEFEFE]/20" : "w-16 h-16 border-[#7F95AF]/20"
+                    isCenter ? "w-20 h-20 border-[#FFFFFF]/20" : "w-16 h-16 border-[#FFB703]/20"
                   }`}>
                     <img
                       src={testimonial.img || "/placeholder.svg"}
@@ -134,8 +134,8 @@ export default function TestimonialsSection() {
                   <div className="mb-4">
                     <span className={`font-medium ${
                       isCenter 
-                        ? "text-xl text-[#FEFEFE]" 
-                        : "text-lg text-[#7F95AF]"
+                        ? "text-xl text-[#FFFFFF]" 
+                        : "text-lg text-[#FFB703]"
                     }`}>
                       "{testimonial.keyword}"
                     </span>
@@ -145,8 +145,8 @@ export default function TestimonialsSection() {
                   <div className="flex-grow">
                     <p className={`leading-relaxed mb-6 ${
                       isCenter 
-                        ? "text-sm text-[#FEFEFE]" 
-                        : "text-xs text-[#021F69]/80"
+                        ? "text-sm text-[#FFFFFF]" 
+                        : "text-xs text-[#0B2C72]/80"
                     }`}>
                       "{testimonial.body}"
                     </p>
@@ -156,15 +156,15 @@ export default function TestimonialsSection() {
                   <div>
                     <h4 className={`font-bold mb-1 ${
                       isCenter 
-                        ? "text-lg text-[#FEFEFE]" 
-                        : "text-base text-[#021F69]"
+                        ? "text-lg text-[#FFFFFF]" 
+                        : "text-base text-[#0B2C72]"
                     }`}>
                       {testimonial.name}
                     </h4>
                     <p className={`text-sm ${
                       isCenter 
-                        ? "text-[#FEFEFE]/80" 
-                        : "text-[#7F95AF]"
+                        ? "text-[#FFFFFF]/80" 
+                        : "text-[#374151]"
                     }`}>
                       {testimonial.role}
                     </p>
@@ -182,7 +182,7 @@ export default function TestimonialsSection() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-[#7F95AF] scale-125" : "bg-gray-300 hover:bg-gray-400"
+                index === currentIndex ? "bg-[#FFB703] scale-125" : "bg-[#D1D5DB] hover:bg-[#374151]"
               }`}
             />
           ))}
