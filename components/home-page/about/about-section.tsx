@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { ArrowUpRight, Hammer, Building2, Home, Building } from "lucide-react"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 const categories = [
   { name: "Commercial", icon: Building2 },
@@ -17,6 +18,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Right side - Circular image with experience text */}
+          <BlurFade delay={0.3} direction="left" duration={1.0} inView>
           <div className="relative flex justify-center order-1 lg:order-1">
             <div className="relative">
               {/* Circular border */}
@@ -31,6 +33,7 @@ export default function AboutSection() {
               </div>
               
               {/* Rotating text around the circle - OUTSIDE */}
+              
               <div className="absolute inset-0 animate-spin-slow -m-8 sm:-m-10 lg:-m-12">
                 <svg className="w-full h-full" viewBox="0 0 400 400">
                   <defs>
@@ -45,30 +48,43 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
+          </BlurFade>
 
           {/* Left side - Content */}
           <div className="space-y-6 sm:space-y-8 order-2 lg:order-2">
             {/* Badge and heading */}
             <div className="space-y-4 sm:space-y-6 text-start lg:text-left">
+              <BlurFade delay={0.2} direction="right" duration={0.6} inView>
               <div className="inline-block">
                 <span className="px-4 py-2 border-2 border-[#0B2C72] text-[#0B2C72] rounded-full text-sm font-medium bg-[#FFFFFF]/90 backdrop-blur-sm">
                   À PROPOS
                 </span>
               </div>
+              </BlurFade>
+
+              <BlurFade delay={0.4} direction="right" duration={0.8} inView>
               <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-[#0B2C72] leading-tight">
                 Construire vos visions.
                 <br />
                 Créer la réalité.
               </h2>
+              </BlurFade>
             </div>
 
             {/* Category grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {categories.map((category) => {
+              {categories.map((category, index) => {
                 const Icon = category.icon
                 const isHovered = hoveredCategory === category.name
 
                 return (
+                  <BlurFade 
+                    key={category.name}
+                    delay={0.6 + (index * 0.15)} 
+                    direction="up" 
+                    duration={0.6} 
+                    inView
+                  >
                   <div
                     key={category.name}
                     className={`p-4 sm:p-6 border border-gray-200 rounded-lg cursor-pointer transition-all duration-300 backdrop-blur-sm ${
@@ -87,16 +103,20 @@ export default function AboutSection() {
                       <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                   </div>
+                  </BlurFade>
                 )
               })}
             </div>
 
             {/* Description */}
+            <BlurFade delay={1.2} direction="right" duration={0.8} inView>
             <p className="text-[#374151] leading-relaxed text-start lg:text-left text-sm sm:text-base">
               Notre mission est de transformer vos idées en réalisations durables, grâce à la post-tension et à une ingénierie de qualité.
             </p>
+            </BlurFade>
 
             {/* Founder signature */}
+            <BlurFade delay={1.4} direction="up" duration={0.8} inView>
             <div className="flex items-center space-x-4 justify-start lg:justify-start">
               <div>
                 <h4 className="font-semibold text-[#0B2C72] text-sm sm:text-base">Mr COULIBALY ABDOULAYE</h4>
@@ -106,6 +126,7 @@ export default function AboutSection() {
                 <img src="/assets/images/illustrations/page-accueil/signature_2.png" alt="Signature" className="h-8 sm:h-12 w-auto" />
               </div>
             </div>
+            </BlurFade>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 "use client"
 import { ArrowRight } from "lucide-react"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 const newsArticles = [
   {
@@ -31,55 +32,67 @@ export default function NewsSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-2 border-2 border-[#0B2C72] text-[#0B2C72] rounded-full text-sm font-medium mb-6">
-            BLOGS
-          </div>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#0B2C72] mb-4">Actualités et Articles</h2>
+          <BlurFade delay={0.1} inView direction="up">
+            <div className="inline-block px-6 py-2 border-2 border-[#0B2C72] text-[#0B2C72] rounded-full text-sm font-medium mb-6">
+              BLOGS
+            </div>
+          </BlurFade>
+          
+          <BlurFade delay={0.25} inView direction="up" duration={0.8}>
+            <h2 className="text-4xl md:text-5xl font-semibold text-[#0B2C72] mb-4">
+              Actualités et Articles
+            </h2>
+          </BlurFade>
         </div>
 
         {/* News Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newsArticles.map((article) => (
-            <div
+          {newsArticles.map((article, index) => (
+            <BlurFade
               key={article.id}
-              className="group relative bg-[#FFFFFF] rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              delay={0.4 + index * 0.2}
+              inView
+              direction="up"
+              duration={0.7}
             >
-              {/* Image Container */}
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={article.image || "/placeholder.svg"}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              <div className="group relative bg-[#FFFFFF] rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                {/* Image Container */}
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={article.image || "/placeholder.svg"}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
 
-                {/* Category Tag */}
-                <div className="absolute top-4 right-4 bg-[#FFB703] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium">
-                  + {article.category}
+                  {/* Category Tag */}
+                  <div className="absolute top-4 right-4 bg-[#FFB703] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium">
+                    + {article.category}
+                  </div>
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                  {/* Read More Button - appears on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                    <button className="bg-[#FFB703] hover:bg-[#FFB703]/80 text-[#FFFFFF] px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 transform scale-90 group-hover:scale-100">
+                      Lire Plus
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                {/* Read More Button - appears on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <button className="bg-[#FFB703] hover:bg-[#FFB703]/80 text-[#FFFFFF] px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 transform scale-90 group-hover:scale-100">
-                    Lire Plus
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#0B2C72] mb-3 line-clamp-2 group-hover:text-[#FFB703] transition-colors duration-300">
+                    {article.title}
+                  </h3>
+                  <p className="text-[#374151] font-medium text-sm">{article.date}</p>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0B2C72] mb-3 line-clamp-2 group-hover:text-[#FFB703] transition-colors duration-300">
-                  {article.title}
-                </h3>
-                <p className="text-[#374151] font-medium text-sm">{article.date}</p>
+                {/* Hover Border Effect */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#FFB703]/20 rounded-2xl transition-all duration-500" />
               </div>
-
-              {/* Hover Border Effect */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#FFB703]/20 rounded-2xl transition-all duration-500" />
-            </div>
+            </BlurFade>
           ))}
         </div>
       </div>
