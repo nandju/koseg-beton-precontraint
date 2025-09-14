@@ -1,5 +1,6 @@
 "use client"
 import { Hammer, Target, Layers } from "lucide-react"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 const whyUsData = [
   {
@@ -30,29 +31,40 @@ export default function WhyUsSection() {
     <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
       {/* Header */}
       <div className="text-center mb-16 max-w-4xl mx-auto">
-        <div 
-          className="inline-block px-6 py-2 border-2 rounded-full text-sm font-medium mb-6"
-          style={{ borderColor: '#0B2C72', color: '#0B2C72', backgroundColor: '#FFFFFF' }}
-        >
-          POURQUOI NOUS
-        </div>
-        <h2 
-          className="text-xl sm:text-2xl lg:text-5xl font-semibold"
-          style={{ color: '#0B2C72' }}
-        >
-          Nous avons de nombreuses raisons de nous choisir
-        </h2>
+        <BlurFade delay={0.1} inView direction="up">
+          <div 
+            className="inline-block px-6 py-2 border-2 rounded-full text-sm font-medium mb-6"
+            style={{ borderColor: '#0B2C72', color: '#0B2C72', backgroundColor: '#FFFFFF' }}
+          >
+            POURQUOI NOUS
+          </div>
+        </BlurFade>
+        
+        <BlurFade delay={0.25} inView direction="up">
+          <h2 
+            className="text-xl sm:text-2xl lg:text-5xl font-semibold"
+            style={{ color: '#0B2C72' }}
+          >
+            Nous avons de nombreuses raisons de nous choisir
+          </h2>
+        </BlurFade>
       </div>
 
       {/* Cards */}
       <div className="max-w-7xl mx-auto space-y-16">
-        {whyUsData.map((item) => {
+        {whyUsData.map((item, index) => {
           const Icon = item.icon
+          const isEven = index % 2 === 0
           
           return (
             <div key={item.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Image */}
-              <div className="relative">
+              <BlurFade 
+                delay={0.4 + index * 0.2} 
+                inView 
+                direction={isEven ? "left" : "right"}
+                className={`relative ${!isEven ? 'lg:order-2' : ''}`}
+              >
                 <div className="shadow-lg">
                   <img
                     src={item.image || "/placeholder.svg"}
@@ -66,10 +78,15 @@ export default function WhyUsSection() {
                 >
                   {item.id}
                 </div>
-              </div>
+              </BlurFade>
 
               {/* Content */}
-              <div className="space-y-6 text-center lg:text-left">
+              <BlurFade 
+                delay={0.6 + index * 0.2} 
+                inView 
+                direction={isEven ? "right" : "left"}
+                className={`space-y-6 text-center lg:text-left ${!isEven ? 'lg:order-1' : ''}`}
+              >
                 <div className="flex justify-center lg:justify-start">
                   <div 
                     className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center shadow-md"
@@ -101,7 +118,7 @@ export default function WhyUsSection() {
                     Solution {item.id}
                   </div>
                 </div>
-              </div>
+              </BlurFade>
             </div>
           )
         })}
