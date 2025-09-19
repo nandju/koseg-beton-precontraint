@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
+import { BlurFade } from "@/components/magicui/blur-fade"
 
 export default function PortfoliosHero() {
   return (
@@ -20,9 +21,14 @@ export default function PortfoliosHero() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-8 text-balance">Portfolios</h1>
+        <BlurFade delay={0.6} inView direction="up" duration={1.0}>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-8 text-balance">
+          Portfolios
+        </h1>
+        </BlurFade>
 
         {/* Breadcrumb Navigation */}
+        <BlurFade delay={0.9} inView direction="up" duration={0.7}>
         <nav className="flex items-center justify-center space-x-2 text-lg sm:text-xl">
           <Link href="/" className="hover:text-[#FFB703] transition-colors duration-300">
             Accueil
@@ -30,6 +36,7 @@ export default function PortfoliosHero() {
           <ChevronRight className="w-5 h-5 text-white/70" />
           <span className="text-white/90">Portfolios</span>
         </nav>
+        </BlurFade>
       </div>
 
       {/* Scroll Indicator */}
