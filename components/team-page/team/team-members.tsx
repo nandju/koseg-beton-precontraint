@@ -8,7 +8,7 @@ const teamMembers = [
   {
     id: 1,
     name: "Jordan Kouadio",
-    role: "Fondateur de KOSEG",
+    role: "Directeur Général",
     image: "/assets/images/illustrations/page-team/1.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -20,7 +20,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Paula N'Guessan",
-    role: "Co-Fondatrice",
+    role: "Directrice Technique",
     image: "/assets/images/illustrations/page-team/2.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Alice Traoré",
-    role: "Architecte en chef",
+    role: "Ingénieure en Précontrainte",
     image: "/assets/images/illustrations/page-team/3.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -42,7 +42,7 @@ const teamMembers = [
   {
     id: 4,
     name: "Carla Koné",
-    role: "Ingénieure architecte",
+    role: "Responsable Qualité",
     image: "/assets/images/illustrations/page-team/4.png",
     socials: [
       { icon: Linkedin, href: "#" },
@@ -52,7 +52,7 @@ const teamMembers = [
   {
     id: 5,
     name: "Bamba Yao",
-    role: "Co-Fondateur",
+    role: "Chef de Projet",
     image: "/assets/images/illustrations/page-team/5.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -63,7 +63,7 @@ const teamMembers = [
   {
     id: 6,
     name: "Clare Kouamé",
-    role: "Fondatrice associée",
+    role: "Responsable Commercial",
     image: "/assets/images/illustrations/page-team/6.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -74,7 +74,7 @@ const teamMembers = [
   {
     id: 7,
     name: "Jean-Marc Koffi",
-    role: "Architecte principal",
+    role: "Ingénieur Calcul",
     image: "/assets/images/illustrations/page-team/7.png",
     socials: [
       { icon: Linkedin, href: "#" },
@@ -84,7 +84,7 @@ const teamMembers = [
   {
     id: 8,
     name: "Gordon N'Dri",
-    role: "Ingénieur en béton précontraint",
+    role: "Technicien Post-Tension",
     image: "/assets/images/illustrations/page-team/8.png",
     socials: [
       { icon: Facebook, href: "#" },
@@ -109,7 +109,7 @@ export default function TeamMembers() {
           </BlurFade>
           <BlurFade delay={0.2} direction="up" inView={true}>
             <p className="text-lg text-[#374151] max-w-2xl mx-auto">
-              Découvrez les experts qui font de KOSEG un leader dans le secteur de la construction
+              Découvrez les experts qui font de KOSEG Béton Précontraint un leader dans les solutions de précontrainte
             </p>
           </BlurFade>
         </div>

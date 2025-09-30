@@ -26,13 +26,13 @@ export default function ContactFormMap() {
   }
 
   const handleGetDirections = () => {
-    const address = "Zone Industrielle, Yopougon, Abidjan, Côte d'Ivoire"
+    const address = "Abidjan Cocody, Riviera III CITE IRIS, Côte d'Ivoire"
     const encodedAddress = encodeURIComponent(address)
     window.open(`https://maps.google.com/maps?q=${encodedAddress}`, "_blank")
   }
 
   const handleViewLargerMap = () => {
-    const address = "Zone Industrielle, Yopougon, Abidjan, Côte d'Ivoire"
+    const address = "Abidjan Cocody, Riviera III CITE IRIS, Côte d'Ivoire"
     const encodedAddress = encodeURIComponent(address)
     window.open(`https://maps.google.com/maps?q=${encodedAddress}&z=15`, "_blank")
   }
@@ -48,14 +48,14 @@ export default function ContactFormMap() {
               {/* <BlurFade delay={0.3} direction="down" duration={0.6}> */}
                 <div className="absolute inset-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0!2d-4.0228!3d5.3097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMTgnMzUuMCJOIDTCsDAyJzEwLjAiVw!5e0!3m2!1sfr!2sci!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0!2d-3.9639!3d5.3599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjEnMzUuNiJOIDPCsDU3JzUwLjAiVw!5e0!3m2!1sfr!2sci!4v1234567890"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Localisation Construction BTP"
+                    title="Localisation KOSEG Béton Précontraint"
                   />
                 </div>
               {/* </BlurFade> */}
@@ -71,10 +71,10 @@ export default function ContactFormMap() {
                     </BlurFade>
                     <div>
                       <BlurFade delay={0.7} direction="up" duration={0.4}>
-                        <h3 className="font-bold text-[#0B2C72] text-sm">Construction BTP</h3>
+                        <h3 className="font-bold text-[#0B2C72] text-sm">KOSEG Béton Précontraint</h3>
                       </BlurFade>
                       <BlurFade delay={0.8} direction="up" duration={0.4}>
-                        <p className="text-[#374151] text-xs mb-2">Zone Industrielle, Yopougon</p>
+                        <p className="text-[#374151] text-xs mb-2">Cocody, Riviera III CITE IRIS</p>
                       </BlurFade>
                       <BlurFade delay={0.9} direction="up" duration={0.4}>
                         <div className="flex gap-2">

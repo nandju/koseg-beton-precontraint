@@ -15,13 +15,13 @@ const AboutSection = () => {
       number: '01',
       title: 'Qui Nous Sommes',
       content: {
-        title: "Façonnons expertement l'avenir de la construction, un projet à la fois.",
-        description: "KOSEG est une entreprise de construction moderne qui combine expertise traditionnelle et innovations technologiques. Depuis notre création, nous nous engageons à livrer des projets de qualité supérieure qui dépassent les attentes de nos clients et contribuent au développement durable de nos communautés.",
+        title: "Spécialistes du béton précontraint, façonnons des structures durables et innovantes.",
+        description: "KOSEG Béton Précontraint est une entreprise spécialisée dans la fourniture de solutions complètes en précontrainte. Nous mettons à votre service notre expertise reconnue pour des projets d'envergure, garantissant performance et durabilité. Notre engagement est de fournir des solutions innovantes, adaptées aux défis techniques les plus complexes du BTP.",
         highlights: [
-          "Plus de 15 ans d'expertise en construction",
-          "Équipe de professionnels certifiés",
-          "Approche innovante et durable",
-          "Engagement envers l'excellence"
+          "Franchise exclusive avec MEGA PREFAB",
+          "Expertise en systèmes de précontrainte",
+          "Solutions par post-tension et pré-tension",
+          "Accompagnement technique complet"
         ]
       }
     },
@@ -30,13 +30,13 @@ const AboutSection = () => {
       number: '02',
       title: 'Notre Mission',
       content: {
-        title: "Construire un avenir durable avec des solutions innovantes.",
-        description: "Notre mission est de transformer le secteur de la construction en intégrant les dernières technologies et pratiques durables. Nous nous engageons à créer des espaces qui améliorent la qualité de vie tout en respectant l'environnement et en optimisant les ressources.",
+        title: "Accompagner les professionnels dans leurs projets les plus ambitieux.",
+        description: "Nous accompagnons les ingénieurs civils, maîtres d'ouvrage et responsables techniques dans la réalisation de leurs projets les plus ambitieux, en garantissant performance, sécurité et durabilité. Notre mission est d'offrir des systèmes de précontrainte de haute qualité qui optimisent les structures et réduisent les coûts de construction.",
         highlights: [
-          "Innovation technologique continue",
-          "Pratiques de construction durables",
-          "Solutions personnalisées",
-          "Respect des délais et budgets"
+          "Systèmes conformes aux normes strictes",
+          "Optimisation des portées et épaisseurs",
+          "Réduction des coûts de structure",
+          "Suivi technique et qualité rigoureux"
         ]
       }
     },
@@ -45,13 +45,13 @@ const AboutSection = () => {
       number: '03',
       title: 'Nos Valeurs',
       content: {
-        title: "L'excellence, l'intégrité et l'innovation guident chacune de nos actions.",
-        description: "Nos valeurs fondamentales définissent notre approche et notre engagement envers nos clients, partenaires et collaborateurs. Elles constituent le socle sur lequel nous bâtissons notre réputation et notre succès à long terme.",
+        title: "Qualité, fiabilité et innovation au cœur de notre engagement.",
+        description: "Chez KOSEG, la qualité est notre priorité absolue. Nos systèmes de précontrainte sont conçus et fabriqués selon les normes les plus strictes. Nous bénéficions d'une franchise exclusive avec MEGA PREFAB, un leader mondial, assurant des produits de haute fiabilité et une garantie inégalée.",
         highlights: [
-          "Qualité et excellence sans compromis",
-          "Transparence et intégrité",
-          "Innovation et amélioration continue",
-          "Responsabilité environnementale"
+          "Qualité et conformité certifiées",
+          "Partenariat avec leader mondial",
+          "Matériaux haute résistance",
+          "Contrôles qualité à chaque étape"
         ]
       }
     }
@@ -71,18 +71,18 @@ const AboutSection = () => {
               <div className="relative">
                 <img
                   src="/assets/images/illustrations/page-history/4.png"
-                  alt="Équipe de construction KOSEG travaillant sur les plans"
+                  alt="Équipe KOSEG travaillant sur système de précontrainte"
                   className="w-full h-80 lg:h-96 object-cover rounded-lg shadow-lg"
                 />
                 
-                {/* ISO Certification Badge */}
+                {/* MEGA PREFAB Partnership Badge */}
                 <BlurFade delay={0.6} direction="up" inView={true}>
                   <div className="absolute top-4 right-4 bg-white rounded-full p-4 shadow-lg">
                     <div className="text-center">
                       <CheckCircle className="w-8 h-8 mx-auto mb-2" style={{ color: '#0B2C72' }} />
-                      <div className="text-sm font-bold" style={{ color: '#0B2C72' }}>ISO 9001</div>
+                      <div className="text-sm font-bold" style={{ color: '#0B2C72' }}>MEGA PREFAB</div>
                       <div className="text-xs font-semibold px-2 py-1 rounded text-white" style={{ backgroundColor: '#374151' }}>
-                        CERTIFIÉ
+                        PARTENAIRE
                       </div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ const AboutSection = () => {
               <div className="w-full lg:w-4/5 ml-auto">
                 <img
                   src="/assets/images/illustrations/page-history/news-2.jpg"
-                  alt="Chantier de construction KOSEG avec grue"
+                  alt="Chantier avec dalles précontraintes KOSEG"
                   className="w-full h-64 object-cover object-bottom rounded-lg shadow-lg"
                 />
               </div>
@@ -115,7 +115,7 @@ const AboutSection = () => {
             {/* Main Heading */}
             <BlurFade delay={0.2} direction="right" inView={true}>
               <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight" style={{ color: '#0B2C72' }}>
-                Engagés pour une qualité et des résultats supérieurs.
+                Solutions de précontrainte pour une construction durable.
               </h2>
             </BlurFade>
 
@@ -182,12 +182,12 @@ const AboutSection = () => {
             <BlurFade delay={0.7} direction="up" inView={true}>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md" style={{ color: '#0B2C72', border: '2px solid #0B2C72' }}>
-                  <span>Découvrir Notre Histoire</span>
+                  <span>Nos Solutions</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 
                 <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-300 hover:shadow-lg hover:scale-105" style={{ backgroundColor: '#FFB703' }}>
-                  <span>Commencer</span>
+                  <span>Contactez-nous</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

@@ -10,60 +10,61 @@ const ConstructionBlog = () => {
     {
       id: 1,
       image: '/assets/images/illustrations/page-Blogs/news-1.jpg',
-      category: 'Usine',
-      title: 'Améliorez votre maison pour réduire vos dépenses cet hiver',
-      date: '17 avril 2024',
-      excerpt: 'Découvrez les meilleures stratégies pour optimiser l\'efficacité énergétique de votre domicile...'
+      category: 'Innovation',
+      title: 'Les avantages économiques du béton précontraint dans la construction moderne',
+      date: '15 septembre 2025',
+      excerpt: 'Découvrez comment les systèmes de précontrainte KOSEG permettent de réduire les coûts de structure jusqu\'à 30%...'
     },
     {
       id: 2,
       image: '/assets/images/illustrations/page-Blogs/news-2.jpg',
-      category: 'Commercial',
-      title: 'Le Centre Bill et Adele Jonas est Achevé par Alten Construction.',
-      date: '17 avril 2024',
-      excerpt: 'Un projet architectural ambitieux qui redéfinit les standards du développement commercial moderne...'
+      category: 'Technique',
+      title: 'Post-tension adhérente vs non adhérente : Guide complet pour choisir',
+      date: '08 septembre 2025',
+      excerpt: 'Comprendre les différences techniques et les applications optimales de chaque système de précontrainte...'
     },
     {
       id: 3,
       image: '/assets/images/illustrations/page-Blogs/news-3.jpg',
-      category: 'Résidentiel',
-      title: 'Le Taux d\'Intérêt sur les Petits Prêts est Maintenant au Plus Bas pour Votre Rêve',
-      date: '17 avril 2024',
-      excerpt: 'Profitez des conditions financières exceptionnelles pour concrétiser vos projets immobiliers...'
+      category: 'Projet',
+      title: 'Dalles précontraintes : Solution idéale pour les bâtiments multi-étages',
+      date: '01 septembre 2025',
+      excerpt: 'Analyse des performances des dalles post-tendues dans les projets résidentiels et commerciaux d\'Abidjan...'
     },
     {
       id: 4,
       image: '/assets/images/illustrations/page-Blogs/project-2.jpg',
-      category: 'Rénovation',
-      title: 'Top 5 des Points à Considérer pour Choisir un Entrepreneur Général',
-      date: '17 avril 2024',
-      excerpt: 'Guide complet pour sélectionner le partenaire idéal pour vos projets de construction et rénovation...'
+      category: 'Guide',
+      title: 'Top 5 des critères pour sélectionner vos systèmes de précontrainte',
+      date: '25 août 2025',
+      excerpt: 'Guide complet pour choisir les solutions de torons, ancrages et équipements adaptés à votre projet...'
     },
     {
       id: 5,
       image: '/assets/images/illustrations/page-Blogs/project-3.jpg',
-      category: 'Usine',
-      title: 'Technologies Interactives dans les Usines et les Installations',
-      date: '17 avril 2024',
-      excerpt: 'L\'innovation technologique révolutionne les processus industriels pour une efficacité optimale...'
+      category: 'Partenariat',
+      title: 'MEGA PREFAB : Excellence mondiale au service de vos projets',
+      date: '18 août 2025',
+      excerpt: 'Découvrez notre partenariat exclusif avec MEGA PREFAB et les garanties de qualité qui en découlent...'
     },
     {
       id: 6,
       image: '/assets/images/illustrations/page-Blogs/project-4.jpg',
-      category: 'Remplacement de Toit',
-      title: 'Création de Projet Industriel à Travers le Monde',
-      date: '17 avril 2024',
-      excerpt: 'Exploration des projets industriels les plus innovants à l\'échelle internationale...'
+      category: 'Réalisation',
+      title: 'Projets de précontrainte : Études de cas en Côte d\'Ivoire',
+      date: '10 août 2025',
+      excerpt: 'Exploration de nos réalisations majeures en post-tension pour des structures commerciales et industrielles...'
     }
   ];
 
   const getCategoryColor = (category:string) => {
     const colors: { [key: string]: string } = {
-      'Usine': '#0B2C72',
-      'Commercial': '#374151',
-      'Résidentiel': '#0B2C72',
-      'Rénovation': '#374151',
-      'Remplacement de Toit': '#0B2C72'
+      'Innovation': '#0B2C72',
+      'Technique': '#374151',
+      'Projet': '#0B2C72',
+      'Guide': '#374151',
+      'Partenariat': '#0B2C72',
+      'Réalisation': '#374151'
     };
     return colors[category] || '#374151';
   };

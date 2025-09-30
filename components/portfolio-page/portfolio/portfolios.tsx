@@ -11,30 +11,30 @@ const projects = [
   {
     id: 1,
     image: '/assets/images/illustrations/page-portfolios/project-1.png',
-    category: 'Commercial',
-    title: 'Développements Urbanite',
-    description: 'Planchers préconstraints et solutions de post-tension pour bâtiment commercial, optimisant portées, sécurité et durabilité.',
+    category: 'Bâtiment Commercial',
+    title: 'Immeuble de Bureaux Plateau',
+    description: 'Dalles précontraintes par post-tension pour un immeuble de 8 étages. Portées optimisées de 12m sans poteaux intermédiaires, réduisant les coûts de structure de 30%.',
   },
   {
     id: 2,
     image: '/assets/images/illustrations/page-portfolios/project-2.jpg',
-    category: 'Rénovation Toiture',
-    title: 'Maisons Mountain Skys',
-    description: 'Renforcement et réhabilitation des toitures et dalles résidentielles par post-tension, pour une meilleure résistance et longévité.',
+    category: 'Infrastructure',
+    title: 'Parking Multi-Niveaux Cocody',
+    description: 'Système de post-tension non adhérente pour 5 niveaux de stationnement. Dalles minces de 18cm supportant charges lourdes, avec réduction significative du poids propre.',
   },
   {
     id: 3,
     image: '/assets/images/illustrations/page-portfolios/project-3.jpg',
-    category: 'Usine',
-    title: 'Construction Rivers Edge',
-    description: "Structures industrielles en béton précontraint, conçues pour charges lourdes et exploitation intensive, avec maîtrise des déformations.",
+    category: 'Industriel',
+    title: 'Plateforme Logistique PK24',
+    description: "Planchers précontraints haute résistance pour entrepôt industriel. Système adhérent avec torons à haute limite d'élasticité, maîtrise parfaite des déformations sous charges d'exploitation.",
   },
   {
     id: 4,
     image: '/assets/images/illustrations/page-portfolios/project-4.jpg',
-    category: 'Usine',
-    title: 'Concepts Bâtiments Extérieurs',
-    description: "Dalles préconstraintes et systèmes de post-tension pour tours commerciales, maximisant l'espace utile et réduisant l'épaisseur des planchers.",
+    category: 'Résidentiel',
+    title: 'Complexe Résidentiel Riviera',
+    description: "Tour d'habitation de 12 étages avec dalles post-tendues. Suppression des joints de dilatation sur 40m, isolation acoustique optimale et résistance au feu accrue.",
   }
 ];
 

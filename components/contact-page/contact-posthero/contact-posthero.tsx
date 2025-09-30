@@ -78,7 +78,7 @@ export default function ContactSection() {
                   Contactez-nous
                 </h2>
                 <p className="text-lg" style={{ color: '#374151' }}>
-                  Prenez rendez-vous avec nous pour construire votre parcours de conception.
+                  Prenez rendez-vous avec nos experts pour discuter de vos projets en béton précontraint.
                 </p>
               </div>
             </BlurFade>
@@ -90,8 +90,8 @@ export default function ContactSection() {
                     Appelez-nous maintenant
                   </h3>
                   <div style={{ color: '#374151' }} className="space-y-1">
-                    <p>Parlons ensemble et voyons comment nous pouvons</p>
-                    <p>travailler ensemble +225 27 45 12 34</p>
+                    <p>Parlons ensemble de vos besoins en précontrainte</p>
+                    <p>+225 27 22 38 40 88 / 07 09 91 70 01</p>
                   </div>
                 </div>
               </BlurFade>
@@ -103,7 +103,7 @@ export default function ContactSection() {
                   </h3>
                   <div style={{ color: '#374151' }} className="space-y-1">
                     <p>Nous répondons généralement dans les 24 heures</p>
-                    <p>projets@construction-btp.ci</p>
+                    <p>commercial@koseg-ci.com</p>
                   </div>
                 </div>
               </BlurFade>
@@ -111,11 +111,28 @@ export default function ContactSection() {
               <BlurFade delay={0.4} direction="left" inView={true}>
                 <div>
                   <h3 className="text-lg font-semibold mb-3" style={{ color: '#0B2C72' }}>
-                    Votre Localisation
+                    Notre Localisation
                   </h3>
                   <p style={{ color: '#374151' }}>
-                    Zone Industrielle, Yopougon, Abidjan, Côte d'Ivoire
+                    Abidjan Cocody, Riviera III CITE IRIS, Côte d'Ivoire
                   </p>
+                </div>
+              </BlurFade>
+
+              <BlurFade delay={0.5} direction="left" inView={true}>
+                <div>
+                  <h3 className="text-lg font-semibold mb-3" style={{ color: '#0B2C72' }}>
+                    Site Web
+                  </h3>
+                  <a 
+                    href="https://www.koseg-ci.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FFB703] transition-colors"
+                    style={{ color: '#374151' }}
+                  >
+                    www.koseg-ci.com
+                  </a>
                 </div>
               </BlurFade>
             </div>
@@ -140,7 +157,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         name="name"
-                        placeholder="Nom"
+                        placeholder="Nom complet"
                         value={formData.name}
                         // onChange={handleInputChange}
                         required
@@ -181,7 +198,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         name="subject"
-                        placeholder="Sujet"
+                        placeholder="Sujet (Post-tension, Dalles, Devis...)"
                         value={formData.subject}
                         // onChange={handleInputChange}
                         required
@@ -197,7 +214,7 @@ export default function ContactSection() {
                   <div>
                     <textarea
                       name="message"
-                      placeholder="Comment pouvons-nous vous aider ? N'hésitez pas à nous contacter !"
+                      placeholder="Décrivez votre projet : type de structure, portées, étages, localisation..."
                       rows={6}
                       value={formData.message}
                       // onChange={handleInputChange}
@@ -222,7 +239,7 @@ export default function ContactSection() {
                       style={{ accentColor: '#0B2C72' }}
                     />
                     <label htmlFor="agreeTerms" className="text-sm" style={{ color: '#374151' }}>
-                      J'accepte vos conditions générales et conditions tempor aliqua.
+                      J'accepte les conditions générales et autorise KOSEG à me contacter concernant mes besoins en précontrainte.
                     </label>
                   </div>
                 </BlurFade>
@@ -249,7 +266,7 @@ export default function ContactSection() {
                       className="w-full md:w-auto px-8 py-3 rounded-full text-white font-medium hover:opacity-90 hover:transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ backgroundColor: '#FFB703' }}
                     >
-                      <span>{isSubmitting ? 'Envoi...' : 'Commencer'}</span>
+                      <span>{isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}</span>
                       {!isSubmitting && (
                         <svg 
                           className="w-4 h-4" 

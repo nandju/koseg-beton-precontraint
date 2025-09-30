@@ -5,23 +5,23 @@ import { BlurFade } from "@/components/magicui/blur-fade"
 const newsArticles = [
   {
     id: 1,
-    category: "Usine",
-    title: "Améliorations de votre maison qui vous aideront à économiser de l'argent cet hiver",
-    date: "17 avril 2024",
+    category: "Innovation",
+    title: "Les avantages du béton précontraint pour les structures modernes en Côte d'Ivoire",
+    date: "15 septembre 2025",
     image: "/assets/images/illustrations/page-accueil/news-1.jpg",
   },
   {
     id: 2,
-    category: "Commercial",
-    title: "Le centre Bill et Adele Jonas est achevé par Alten Construction.",
-    date: "17 avril 2024",
+    category: "Technique",
+    title: "Post-tension adhérente vs non adhérente : comment choisir la meilleure solution ?",
+    date: "08 septembre 2025",
     image: "/assets/images/illustrations/page-accueil/news-2.jpg",
   },
   {
     id: 3,
-    category: "Résidentiel",
-    title: "Le taux d'intérêt sur les petits prêts est maintenant le plus bas pour votre rêve",
-    date: "17 avril 2024",
+    category: "Projet",
+    title: "Réduction des coûts de construction grâce aux dalles précontraintes KOSEG",
+    date: "01 septembre 2025",
     image: "/assets/images/illustrations/page-accueil/news-3.jpg",
   },
 ]
@@ -34,13 +34,13 @@ export default function NewsSection() {
         <div className="text-center mb-16">
           <BlurFade delay={0.1} inView direction="up">
             <div className="inline-block px-6 py-2 border-2 border-[#0B2C72] text-[#0B2C72] rounded-full text-sm font-medium mb-6">
-              BLOGS
+              ACTUALITÉS
             </div>
           </BlurFade>
           
           <BlurFade delay={0.25} inView direction="up" duration={0.8}>
             <h2 className="text-4xl md:text-5xl font-semibold text-[#0B2C72] mb-4">
-              Actualités et Articles
+              Actualités et Innovations
             </h2>
           </BlurFade>
         </div>

@@ -10,37 +10,37 @@ const AwardsTimeline = () => {
   const awards = [
     {
       id: 1,
-      year: '2010',
-      title: 'Conseil d\'Expert',
-      subtitle: 'Chantier de l\'Année',
-      description: 'La planification de la construction implique différents types de ressources et de participants pour garantir la réussite du projet selon les normes les plus strictes.',
+      year: '2018',
+      title: 'Excellence Technique',
+      subtitle: 'Innovation en Précontrainte',
+      description: 'Reconnaissance pour l\'excellence de nos systèmes de post-tension et notre expertise dans la réalisation de dalles précontraintes haute performance avec optimisation des portées.',
       icon: Award,
       position: 'top'
     },
     {
       id: 2,
-      year: '2012',
-      title: 'Excellence Technique',
-      subtitle: 'Innovation du Mois',
-      description: 'Reconnaissance de notre approche innovante dans l\'intégration de technologies durables et de méthodes de construction écologiques avancées.',
+      year: '2020',
+      title: 'Partenariat MEGA PREFAB',
+      subtitle: 'Franchise Exclusive',
+      description: 'Obtention de la franchise exclusive avec MEGA PREFAB, leader mondial en systèmes de précontrainte, garantissant des produits de haute fiabilité et une qualité inégalée.',
       icon: Star,
       position: 'bottom'
     },
     {
       id: 3,
-      year: '2014',
-      title: 'Collaboration',
-      subtitle: 'Projet du Mois',
-      description: 'Prix décerné pour notre excellence dans la gestion collaborative de projets complexes et notre capacité à coordonner efficacement toutes les parties prenantes.',
+      year: '2022',
+      title: 'Projet d\'Envergure',
+      subtitle: 'Structure Complexe',
+      description: 'Distinction pour la réussite d\'un projet majeur utilisant nos systèmes de précontrainte adhérente, avec maîtrise parfaite des contraintes techniques et respect des délais.',
       icon: Trophy,
       position: 'top'
     },
     {
       id: 4,
-      year: '2016',
-      title: 'Reconnaissance Mondiale',
-      subtitle: 'Chantier de la Semaine',
-      description: 'Distinction internationale pour notre engagement envers l\'excellence, l\'innovation et le développement durable dans le secteur de la construction moderne.',
+      year: '2024',
+      title: 'Leader Régional',
+      subtitle: 'Solutions Durables',
+      description: 'Reconnaissance en tant que leader des solutions de béton précontraint en Côte d\'Ivoire pour notre engagement envers la durabilité, l\'innovation et la performance structurelle.',
       icon: Globe,
       position: 'bottom'
     }
@@ -54,13 +54,13 @@ const AwardsTimeline = () => {
         <div className="text-center mb-16">
           <BlurFade delay={0.1} direction="up" inView={true}>
             <div className="inline-flex items-center px-4 py-2 rounded-full border-2 border-[#0B2C72] text-[#0B2C72] mb-6">
-              <span className="text-sm font-medium uppercase tracking-wide">RÉCOMPENSES</span>
+              <span className="text-sm font-medium uppercase tracking-wide">RÉALISATIONS</span>
             </div>
           </BlurFade>
           
           <BlurFade delay={0.2} direction="up" inView={true}>
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#0B2C72]">
-              Récompenses Honorables
+              Nos Réalisations et Distinctions
             </h2>
           </BlurFade>
         </div>
