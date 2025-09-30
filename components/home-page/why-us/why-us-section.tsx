@@ -5,26 +5,30 @@ import { BlurFade } from "@/components/magicui/blur-fade"
 const whyUsData = [
   {
     id: "01",
-    title: "Qualité et livraison dans les délais",
-    description: "Notre engagement envers l'excellence se reflète dans chaque projet que nous entreprenons. Nous garantissons une qualité irréprochable et respectons scrupuleusement les délais convenus.",
+    title: "Qualité & Respect des délais",
+    description: "Nous livrons des ouvrages conformes aux normes les plus strictes, tout en respectant les planning contractuels grâce à une organisation chantier rigoureuse.",
     image: "/assets/images/illustrations/page-accueil/why-us-01.png",
+    imageAlt: "Contrôle qualité sur chantier KOSEG",
     icon: Hammer,
   },
   {
-    id: "02", 
-    title: "Mesures précises",
-    description: "La précision est au cœur de notre métier. Grâce à nos outils de mesure de pointe et notre expertise technique, nous garantissons des résultats d'une exactitude parfaite.",
+    id: "02",
+    title: "Maitrise des gestes et mesures précises",
+    description: "Outils de mesure de pointe et équipes qualifiées garantissent un contrôle exact des tensions, ancrages et géométries pour une durabilité maximale.",
     image: "/assets/images/illustrations/page-accueil/why-us-02.png",
+    imageAlt: "Technicien mesurant tension de toron - KOSEG",
     icon: Target,
   },
   {
     id: "03",
-    title: "Méthodes modernes", 
-    description: "Nous utilisons les technologies et méthodes les plus avancées du secteur. Notre approche innovante nous permet de réaliser des constructions durables et efficaces.",
+    title: "Méthodes & innovation industrielle",
+    description: "Nos processus intègrent les meilleures pratiques industrielles (précontrainte, post-tension) et les standards partenaires MEGA PREFAB pour des solutions performantes.",
     image: "/assets/images/illustrations/page-accueil/why-us-03.png",
+    imageAlt: "Atelier et équipements de précontrainte KOSEG",
     icon: Layers,
   },
 ]
+
 
 export default function WhyUsSection() {
   return (
@@ -45,7 +49,7 @@ export default function WhyUsSection() {
             className="text-xl sm:text-2xl lg:text-5xl font-semibold"
             style={{ color: '#0B2C72' }}
           >
-            Nous avons de nombreuses raisons de nous choisir
+            Pourquoi choisir KOSEG Béton Précontraint
           </h2>
         </BlurFade>
       </div>

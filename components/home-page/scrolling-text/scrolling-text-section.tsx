@@ -3,14 +3,15 @@ import { ArrowRight } from "lucide-react"
 import { BlurFade } from "@/components/magicui/blur-fade"
 
 export default function ScrollingTextSection() {
-  const textItems = [
-    "Expertise reconnue",
-    "Solutions sur mesure",
-    "Qualité et durabilité",
-    "Accompagnement complet",
-    "Innovation et performance",
-    "Fiabilité et engagement",
-  ];
+const textItems = [
+  "Précontrainte Post-tension",
+  "Durabilité garantie",
+  "Innovation continue",
+  "Accompagnement technique",
+  "Qualité certifiée",
+  "Expertise KOSEG",
+];
+
 
   return (
     <section className="py-8 bg-[#F3EEE3] overflow-hidden">

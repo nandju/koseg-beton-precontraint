@@ -49,14 +49,14 @@ export default function ContactSection() {
           {/* Main heading */}
           <BlurFade delay={0.6} direction="up" duration={1.0} inView>
             <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-[#FFFFFF] mb-8 leading-tight">
-              {"Construisons quelque chose d'exceptionnel."}
+              {"Contactez KOSEG Béton Précontraint."}
             </h2>
           </BlurFade>
 
           {/* Description */}
           <BlurFade delay={0.8} direction="up" duration={0.8} inView>
             <p className="text-lg md:text-xl text-[#FFFFFF]/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Contactez-nous dès aujourd'hui et donnons vie à vos idées, avec expertise, innovation et passion.
+              Pour toute demande technique, devis ou partenariat, contactez notre équipe commerciale et technique. Nous répondrons sous 48 heures et vous accompagnerons à chaque étape de votre projet.
             </p>
           </BlurFade>
 
@@ -64,7 +64,7 @@ export default function ContactSection() {
           <BlurFade delay={1.0} direction="up" duration={0.8} inView>
             <button className="inline-flex items-center gap-3 bg-[#FFB703] text-[#FFFFFF] px-8 py-3 rounded-full font-medium text-lg hover:bg-[#FFB703]/90 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              Plus de détails
+              Demander un devis
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>

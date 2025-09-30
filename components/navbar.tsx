@@ -152,12 +152,12 @@ export default function Navbar() {
           {/* Bouton téléphone avec animation améliorée */}
           <BlurFade delay={0.8} direction="left" duration={0.6}>
             <div className="hidden lg:flex items-center space-x-4">
-              <a href="tel:+22507070707" className="inline-block">
+              <a href="tel:+2252722384088" className="inline-block">
                 <Button 
                   className="px-6 py-2 rounded-full flex items-center gap-2 font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300 group bg-white text-[#0B2C72] border-2 border-[#0B2C72] hover:bg-[#FFB703] hover:border-[#FFB703] hover:text-white"
                 >
                   <PhoneCall className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
-                  <span>+225 07 07 07 07</span>
+                  <span>+225 27 22 38 40 88</span>
                 </Button>
               </a>
             </div>
@@ -238,12 +238,12 @@ export default function Navbar() {
             
             <BlurFade delay={0.9} direction="up" duration={0.5}>
               <div className="pt-4">
-                <a href="tel:+22507070707" className="block">
+                <a href="tel:+2252722384088" className="block">
                   <Button
                     className="px-6 py-2 rounded-full w-full flex items-center justify-center gap-2 font-semibold hover:scale-105 transition-all duration-300 group bg-white text-[#0B2C72] border-2 border-[#0B2C72] hover:bg-[#FFB703] hover:border-[#FFB703] hover:text-white"
                   >
                     <Phone className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12" />
-                    <span>+225 07 07 07 07</span>
+                    <span>+225 27 22 38 40 88</span>
                   </Button>
                 </a>
               </div>

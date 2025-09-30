@@ -41,7 +41,7 @@ export default function AboutSection() {
                   </defs>
                   <text className="text-xs sm:text-sm font-medium fill-[#FFB703]">
                     <textPath href="#circle" startOffset="0%">
-                      25 ans d'expérience • 25 ans d'expérience •
+                      25 ans d'expérience • KOSEG Béton Précontraint • Solutions post-tension •
                     </textPath>
                   </text>
                 </svg>
@@ -64,9 +64,9 @@ export default function AboutSection() {
 
               <BlurFade delay={0.4} direction="right" duration={0.8} inView>
               <h2 className="text-xl sm:text-2xl lg:text-5xl font-semibold text-[#0B2C72] leading-tight">
-                Construire vos visions.
+                INNOVATIONS ET SOLUTIONS
                 <br />
-                Créer la réalité.
+                POUR UNE CONSTRUCTION DURABLE
               </h2>
               </BlurFade>
             </div>
@@ -111,7 +111,8 @@ export default function AboutSection() {
             {/* Description */}
             <BlurFade delay={1.2} direction="right" duration={0.8} inView>
             <p className="text-[#374151] leading-relaxed text-start lg:text-left text-sm sm:text-base">
-              Notre mission est de transformer vos idées en réalisations durables, grâce à la post-tension et à une ingénierie de qualité.
+              KOSEG Béton Précontraint fournit des solutions complètes en précontrainte (post-tension et pré-tension) : conception, fourniture de torons, ancrages, gaines et supervision chantier. Nous accompagnons maîtres d’ouvrage et bureaux d’études pour garantir performance, sécurité et durabilité des ouvrages.
+
             </p>
             </BlurFade>
 
@@ -119,11 +120,11 @@ export default function AboutSection() {
             <BlurFade delay={1.4} direction="up" duration={0.8} inView>
             <div className="flex items-center space-x-4 justify-start lg:justify-start">
               <div>
-                <h4 className="font-semibold text-[#0B2C72] text-sm sm:text-base">Mr COULIBALY ABDOULAYE</h4>
-                <p className="text-[#374151] text-xs sm:text-sm">Fondateur</p>
+                <h4 className="font-semibold text-[#0B2C72] text-sm sm:text-base">Mr KODO ISRAEL NAKOU</h4>
+                <p className="text-[#374151] text-xs sm:text-sm">Directeur Général</p>
               </div>
               <div className="ml-8">
-                <img src="/assets/images/illustrations/page-accueil/signature_2.png" alt="Signature" className="h-8 sm:h-12 w-auto" />
+                <img src="/assets/images/illustrations/page-accueil/signature_3.png" alt="Signature" className="h-12 sm:h-16 w-auto" />
               </div>
             </div>
             </BlurFade>

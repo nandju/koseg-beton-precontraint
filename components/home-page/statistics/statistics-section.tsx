@@ -10,26 +10,27 @@ interface Statistic {
 
 const statistics: Statistic[] = [
   {
-    number: 25,
+    number: 27,
     label: "ANNÉES",
-    description: "Nous fournissons nos services depuis 27 ans",
+    description: "Nous fournissons nos services depuis plus de 27 ans",
   },
   {
     number: 82,
     label: "PROJETS",
-    description: "Nous avons récemment réalisé plus de 80 projets de qualité",
+    description: "Nous avons réalisé plus de 80 projets de qualité",
   },
   {
     number: 90,
     label: "ÉQUIPE",
-    description: "Notre agence compte plus de 90 membres d'équipe",
+    description: "Notre agence compte plus de 90 membres",
   },
   {
     number: 57,
     label: "CLIENTS",
-    description: "Nos clients satisfaits de nos services",
+    description: "57 clients satisfaits nous font déjà confiance",
   },
 ]
+
 
 function AnimatedCounter({ targetNumber, isVisible }: { targetNumber: number; isVisible: boolean }) {
   const [count, setCount] = useState(0)

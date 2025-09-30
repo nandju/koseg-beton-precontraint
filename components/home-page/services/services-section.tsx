@@ -6,47 +6,60 @@ import { BlurFade } from "@/components/magicui/blur-fade"
 const services = [
   {
     id: 1,
-    title: "Ingénierie Structurelle",
-    subtitle: "Analyse structurelle experte et conception pour des projets de construction sûrs et durables.",
+    title: "Ingénierie structurelle",
+    subtitle: "Études de calcul, notes de dimensionnement et optimisation de dalles précontraintes pour garantir sécurité et performance.",
     icon: Building2,
     image: "/assets/images/illustrations/page-accueil/1.png",
+    imageAlt: "Ingénieur sur plan de structure - KOSEG",
+    href: "/services/ingenierie-structurelle"
   },
   {
     id: 2,
-    title: "Conception Architecturale",
-    subtitle: "Solutions architecturales innovantes qui allient fonctionnalité et attrait esthétique.",
+    title: "Conception architecturale",
+    subtitle: "Conception sur-mesure intégrant exigences architecturales et contraintes techniques liées à la précontrainte.",
     icon: Compass,
     image: "/assets/images/illustrations/page-accueil/2.png",
+    imageAlt: "Maquette architecturale - KOSEG",
+    href: "/services/conception-architecturale"
   },
   {
     id: 3,
-    title: "Nouvelles Constructions",
-    subtitle: "Projets de construction neufs complets du concept à l'achèvement.",
+    title: "Dalles & Post-tension",
+    subtitle: "Solutions de dalles en post-tension pour grandes portées : économies d’épaisseur, performance et durabilité.",
     icon: Home,
     image: "/assets/images/illustrations/page-accueil/3.png",
+    imageAlt: "Dalle en cours de post-tension - KOSEG",
+    href: "/services/dalles-post-tension"
   },
   {
     id: 4,
-    title: "Gestion de Construction",
-    subtitle: "Gestion de projet professionnelle garantissant une livraison dans les délais et le budget.",
+    title: "Gestion & supervision de chantier",
+    subtitle: "Supervision technique de pose, mise en tension et injection — suivi qualité tout au long du chantier.",
     icon: ClipboardList,
     image: "/assets/images/illustrations/page-accueil/4.png",
+    imageAlt: "Contrôle chantier et mise en tension - KOSEG",
+    href: "/services/supervision-chantier"
   },
   {
     id: 5,
-    title: "Services Conception-Construction",
-    subtitle: "Services intégrés de conception et construction pour une livraison de projet rationalisée.",
+    title: "Fourniture d’équipements & torons",
+    subtitle: "Torons haute résistance, ancrages et accessoires fournis avec contrôles qualité et certificats MEGA PREFAB.",
     icon: Hammer,
     image: "/assets/images/illustrations/page-accueil/5.png",
+    imageAlt: "Torons et ancrages - KOSEG",
+    href: "/services/torons-ancrages"
   },
   {
     id: 6,
-    title: "Construction de Fondations",
-    subtitle: "Travail de fondation solide qui assure la longévité de vos projets de construction.",
+    title: "Renforcement & réhabilitation",
+    subtitle: "Renforcement de structures existantes par post-tension et interventions techniques pour prolonger la durée de vie.",
     icon: Focus,
     image: "/assets/images/illustrations/page-accueil/6.png",
+    imageAlt: "Réhabilitation structurelle - KOSEG",
+    href: "/services/renforcement-rehabilitation"
   },
 ]
+
 
 export default function ServicesSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -65,7 +78,7 @@ export default function ServicesSection() {
           
           <BlurFade delay={0.4} direction="up" duration={0.8} inView>
             <h2 className="text-2xl md:text-5xl font-semibold" style={{color: '#0B2C72'}}>
-              Voyons ce que nous allons faire.
+              Solutions complètes en béton précontraint
             </h2>
           </BlurFade>
         </div>

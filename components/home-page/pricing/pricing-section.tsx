@@ -17,22 +17,22 @@ const sectors = [
   },
   {
     id: 3,
-    name: "Préparation et Déblaiement de Site",
+    name: "Industriel",
     image: "/assets/images/illustrations/page-accueil/price_3.jpeg",
   },
   {
     id: 4,
-    name: "Restauration",
+    name: "Infrastructures",
     image: "/assets/images/illustrations/page-accueil/price_4.jpeg",
   },
   {
     id: 5,
-    name: "Rénovation",
+    name: "Rénovation & Réhabilitation",
     image: "/assets/images/illustrations/page-accueil/price_5.jpeg",
   },
   {
     id: 6,
-    name: "Éducationnel",
+    name: "Éducation & Institutions",
     image: "/assets/images/illustrations/page-accueil/price_6.jpeg",
   },
 ]

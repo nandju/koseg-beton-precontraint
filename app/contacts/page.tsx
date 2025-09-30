@@ -9,7 +9,7 @@ import { AnimatedGridPatternDemoFaq } from "@/components/home-page/faq/animated-
 import ServicesSection from "@/components/home-page/services/services-section"
 import ServicesHero from "@/components/services-page/hero/services-hero"
 
-export default function ServicesPage() {
+export default function ContactsPage() {
   return (
     <div className="relative">
 

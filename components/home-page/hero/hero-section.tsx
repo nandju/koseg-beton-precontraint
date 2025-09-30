@@ -8,24 +8,33 @@ import { useEffect, useState } from "react"
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = [
-    {
-      title: "Construire mieux avec le béton.",
-      subtitle: "Nous offrons les services de rénovation de maisons les plus complets du pays, avec de nombreux designs.",
-      buttonText: "Commencer",
-      rightImage: "/assets/images/illustrations/page-accueil/hero_1.png",
-      phone: "+225 07 12 34 56 78",
-      email: "contact@construction.ci"
-    },
-    {
-      title: "Excellence en Architecture Moderne.",
-      subtitle: "Des solutions de construction professionnelles avec des techniques innovantes et des matériaux durables pour vos projets de rêve.",
-      buttonText: "En savoir plus", 
-      rightImage: "/assets/images/illustrations/page-accueil/hero_2.png",
-      phone: "+225 05 43 21 87 65",
-      email: "info@construction.ci"
-    }
-  ]
+const slides = [
+  {
+    id: 1,
+    title: "Construire mieux avec le béton précontraint",
+    subtitle:
+      "Solutions complètes en précontrainte : post-tension, pré-tension, ancrages et supervision chantier — performance, sécurité et durabilité garanties.",
+    buttonText: "Demander un devis",
+    ctaHref: "tel:+2252722384088", // clic sur mobile appelle directement
+    rightImage: "/assets/images/illustrations/page-accueil/hero_1.png",
+    rightImageAlt: "Chantier KOSEG - dalle précontrainte",
+    phone: "+225 27 22 38 40 88",
+    email: "commercial@koseg-ci.com"
+  },
+  {
+    id: 2,
+    title: "Qualité certifiée — Garantie MEGA PREFAB",
+    subtitle:
+      "Matériaux et systèmes fabriqués selon les normes les plus strictes, avec support technique et garantie constructeur pour vos projets d’envergure.",
+    buttonText: "Nos services",
+    ctaHref: "/services", // lien vers la page services
+    rightImage: "/assets/images/illustrations/page-accueil/hero_2.png",
+    rightImageAlt: "Équipe technique KOSEG sur chantier",
+    phone: "+225 07 09 91 70 01",
+    email: "commercial@koseg-ci.com"
+  }
+];
+
 
   useEffect(() => {
     const interval = setInterval(() => {

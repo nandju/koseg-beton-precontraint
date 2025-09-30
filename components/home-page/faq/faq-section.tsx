@@ -6,27 +6,27 @@ import { BlurFade } from "@/components/magicui/blur-fade"
 const faqData = [
   {
     id: 1,
-    question: "Comment traiter votre site pour la construction ?",
+    question: "Qu'est-ce que la précontrainte par post-tension ?",
     answer:
-      "Il existe de nombreuses variantes de passages de Lorem Ipsum disponibles, mais la majorité ont subi des altérations sous une forme ou une autre, par l'humour injecté, ou des mots aléatoires qui ne semblent même pas légèrement crédibles.",
+      "La précontrainte par post-tension consiste à appliquer une tension sur des câbles à haute limite d'élasticité après que le béton atteint la résistance à la compression recommandée. Les contraintes et les flèches induites par le poids propre et les charges d'exploitation sont compensées par celles générées par la courbure des câbles noyés dans l'épaisseur de la dalle.",
   },
   {
     id: 2,
-    question: "Quels sont les tarifs de rénovation ?",
+    question: "Quels sont les avantages des dalles en post-tension ?",
     answer:
-      "Nos tarifs de rénovation varient en fonction de l'étendue des travaux, des matériaux utilisés et de la complexité du projet. Nous fournissons des devis détaillés après une consultation initiale et une évaluation du site pour assurer une tarification transparente.",
+      "Les dalles en post-tension offrent de nombreux avantages : suppression des supports pour une meilleure liberté architecturale, dalles plus minces augmentant la hauteur libre des étages, structures légères réduisant les coûts de fondations, limitation des déformations et du risque de fissuration, réduction des joints de dilatation, isolation acoustique et résistance au feu.",
   },
   {
     id: 3,
-    question: "Avantages de choisir nos services ?",
+    question: "Quelle est la différence entre post-tension adhérente et non adhérente ?",
     answer:
-      "Nous offrons plus de 25 ans d'expérience, un savoir-faire de qualité, des livraisons dans les délais, des méthodes de construction modernes et une équipe dédiée de plus de 90 professionnels engagés à donner vie à votre vision.",
+      "La post-tension adhérente utilise des gaines métalliques ou plastiques avec injection de coulis de ciment pour la protection définitive, offrant une meilleure protection incendie et un ré-ancrage possible. La post-tension non adhérente utilise des torons lubrifiés dans des gaines PEHD, facilitant les opérations sur site sans nécessiter d'injection après tension.",
   },
   {
     id: 4,
-    question: "Comment contacter notre équipe de support ?",
+    question: "Comment contacter KOSEG pour un projet ?",
     answer:
-      "Vous pouvez joindre notre équipe de support par plusieurs canaux : téléphone, email, ou notre formulaire de contact en ligne. Nous sommes disponibles pendant les heures d'ouverture et répondons à toutes les demandes dans les 24 heures.",
+      "Vous pouvez joindre notre équipe à Abidjan Cocody, Riviera III CITE IRIS par téléphone au +225 27 22 38 40 88 / 07 09 91 70 01, par email à commercial@koseg-ci.com ou visiter notre site web www.koseg-ci.com. Nous sommes disponibles pour discuter de tous vos projets de précontrainte.",
   },
 ]
 
@@ -51,19 +51,19 @@ export default function FaqSection() {
 
             <BlurFade delay={0.25} inView direction="left" duration={0.8}>
               <h2 className="text-2xl md:text-5xl font-semibold text-[#0B2C72] leading-tight">
-                Engagés dans des services de toiture de haute qualité
+                Solutions complètes en béton précontraint de haute qualité
               </h2>
             </BlurFade>
 
             <BlurFade delay={0.4} inView direction="left" duration={0.6}>
               <p className="text-[#374151] text-lg leading-relaxed">
-                Nous installons des chaudières et des systèmes de chauffage depuis plus de 10 ans et sommes fiers de dire que nous sommes experts dans ce domaine. Nous avons une équipe d'ingénieurs Gas Safe qualifiés créatifs
+                KOSEG Béton Précontraint propose des solutions innovantes en précontrainte depuis plusieurs années. Nous accompagnons les ingénieurs civils, maîtres d'ouvrage et responsables techniques dans leurs projets les plus ambitieux, garantissant performance, sécurité et durabilité avec notre franchise exclusive MEGA PREFAB.
               </p>
             </BlurFade>
 
             <BlurFade delay={0.55} inView direction="left" duration={0.5}>
               <button className="inline-flex items-center gap-2 bg-[#FFB703] hover:bg-[#FFB703]/80 text-[#FFFFFF] px-8 py-4 rounded-full font-medium transition-colors duration-300">
-                Lire Plus
+                En Savoir Plus
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
