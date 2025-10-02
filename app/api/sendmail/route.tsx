@@ -74,7 +74,7 @@ export async function POST(req:any) {
     // Envoi du mail
     await transporter.sendMail({
       from: `"Formulaire De Contact" <${process.env.SMTP_USER}>`,
-      to: "konedieu5@gmail.com", // ton mail de réception
+      to: "infos@koseg.com", // ton mail de réception
       subject:  `${subject || "Nouveau message du formulaire de contact"}`,
       html: htmlTemplate,
     });
