@@ -329,4 +329,8 @@ export default function QuoteDialog() {
       )}
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 555179f (tout est okay)

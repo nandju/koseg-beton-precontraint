@@ -10,8 +10,13 @@ export async function POST(req:any) {
       port: 465,
       secure: true,
       auth: {
+<<<<<<< HEAD
         user: "Ajoute ici", // défini dans .env.local
         pass: "Ajoute ici "
+=======
+        user: "spprtmonkey@gmail.com", // défini dans .env.local
+        pass: "Support@Monkey225"
+>>>>>>> 555179f (tout est okay)
       },
     });
 
@@ -84,4 +89,8 @@ export async function POST(req:any) {
     console.error("Erreur envoi mail:", error);
     return new Response(JSON.stringify({ success: false, error: error.message }), { status: 500 });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 555179f (tout est okay)
