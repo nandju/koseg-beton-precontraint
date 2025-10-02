@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import FooterSection from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
+import QuoteDialog from "@/components/home-page/quote-dialog/quote-dialog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default function RootLayout({
              {children}
              {/* <Footer /> */}
              <ScrollToTop />
+             <QuoteDialog />
              <FooterSection />
         </div>
       </body>
