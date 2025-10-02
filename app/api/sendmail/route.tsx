@@ -10,8 +10,8 @@ export async function POST(req:any) {
       port: 465,
       secure: true,
       auth: {
-        user: "spprtmonkey@gmail.com", // défini dans .env.local
-        pass: "aawt mqzo gzjw wpsz "
+        user: "Ajoute ici", // défini dans .env.local
+        pass: "Ajoute ici "
       },
     });
 
