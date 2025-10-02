@@ -121,7 +121,7 @@ export default function QuoteDialog() {
     }
   }
 
-  const handleSubmit = () => {
+  const handleSubmit =async () => {
     const currentField = steps[currentStep].id
     const value = formData[currentField as keyof FormData]
     const error = validateField(currentField, value)
@@ -134,9 +134,14 @@ export default function QuoteDialog() {
     // Here you would typically send the data to your backend
     console.log("Form submitted:", formData)
     setIsSubmitted(true)
-
-    // Reset after 3 seconds
-    setTimeout(() => {
+      await fetch('/api/sendmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      }).then((res) => {
+        setTimeout(() => {
       setIsOpen(false)
       setIsSubmitted(false)
       setCurrentStep(0)
@@ -148,6 +153,11 @@ export default function QuoteDialog() {
         description: "",
       })
     }, 3000)
+      }).catch((err) => {
+       setErrors({ [currentField]: `Erreur lors de l'envoi du formulaire: ${err}` });
+      });
+    // Reset after 3 seconds
+    
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
