@@ -9,16 +9,19 @@ Pour activer le déploiement automatique, ajoutez ces secrets dans votre dépôt
 3. Ajoutez les trois secrets suivants :
 
 ### FTP_SERVER
+
 ```
 koseg-ci.com
 ```
 
 ### FTP_USERNAME
+
 ```
 ftp@koseg-ci.com
 ```
 
 ### FTP_PASSWORD
+
 ```
 Dr#Wanq2+ARa#7WM
 ```
@@ -40,6 +43,7 @@ lftp -u ftp@koseg-ci.com,Dr#Wanq2+ARa#7WM koseg-ci.com
 ## Structure de déploiement
 
 Le workflow déploie automatiquement vers :
+
 - **Dossier serveur** : `/home/c2651735c/website/`
 - **Fichiers déployés** :
   - `.next/` (build Next.js)
@@ -51,4 +55,3 @@ Le workflow déploie automatiquement vers :
 ## Redémarrage automatique
 
 Le serveur surveille le fichier `restart.txt` et redémarre automatiquement lorsqu'il est modifié. Le workflow met à jour ce fichier après chaque déploiement.
-

@@ -58,6 +58,8 @@ jobs:
           # Always copy package files
           cp package.json deploy/
           cp package-lock.json deploy/
+          # Create restart trigger file
+          echo "$(date)" > deploy/restart.txt
           # List files for debugging
           echo "Files in deploy directory:"
           ls -la deploy/ || true
@@ -83,18 +85,3 @@ jobs:
           server-dir: /website2/
           dangerous-clean-slate: false
           log-level: verbose
-
-      - name: Create and deploy restart trigger
-        run: |
-          mkdir -p restart-trigger
-          echo "$(date)" > restart-trigger/restart.txt
-
-      - name: Upload restart trigger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ftp.koseg-ci.com
-          username: c2651735c@koseg-ci.com
-          password: 4mYGMqpJYbhfWxV
-          local-dir: ./restart-trigger/
-          server-dir: /website2/
-        continue-on-error: true
