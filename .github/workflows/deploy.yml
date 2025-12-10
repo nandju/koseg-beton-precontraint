@@ -80,7 +80,7 @@ jobs:
           username: c2651735c@koseg-ci.com
           password: 4mYGMqpJYbhfWxV
           local-dir: ./deploy/
-          server-dir: /website/
+          server-dir: /website2/
           dangerous-clean-slate: false
           log-level: verbose
 
@@ -96,5 +96,5 @@ jobs:
           username: c2651735c@koseg-ci.com
           password: 4mYGMqpJYbhfWxV
           local-dir: ./restart-trigger/
-          server-dir: /website/
+          server-dir: /website2/
         continue-on-error: true
