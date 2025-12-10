@@ -32,19 +32,46 @@ jobs:
           mkdir -p deploy
           # Copy standalone build
           if [ -d ".next/standalone" ]; then
+            echo "Using standalone build"
+            # Copy all standalone files
             cp -r .next/standalone/* deploy/
-            # Copy static files
+            # Copy static files to the correct location
             mkdir -p deploy/.next/static
-            cp -r .next/static/* deploy/.next/static/ 2>/dev/null || true
+            if [ -d ".next/static" ]; then
+              cp -r .next/static/* deploy/.next/static/
+            fi
+            # Ensure public folder is at root level
+            if [ -d "public" ]; then
+              cp -r public deploy/
+            fi
+            # Copy our custom server.js (overwrite the one from standalone if needed)
+            cp server.js deploy/
           else
+            echo "Using regular build"
             cp -r .next deploy/
             rm -rf deploy/.next/cache
+            cp -r public deploy/
+            cp package.json deploy/
+            cp package-lock.json deploy/
+            cp server.js deploy/
           fi
-          # Copy public and config files
-          cp -r public deploy/
+          # Always copy package files
           cp package.json deploy/
           cp package-lock.json deploy/
-          cp server.js deploy/
+          # List files for debugging
+          echo "Files in deploy directory:"
+          ls -la deploy/ || true
+          echo "Checking .next structure:"
+          ls -la deploy/.next/ || true
+
+      - name: Verify deployment files
+        run: |
+          echo "=== Deployment files structure ==="
+          find deploy -type f -name "*.js" -o -name "*.json" | head -20
+          echo "=== Total files count ==="
+          find deploy -type f | wc -l
+          echo "=== Directory structure ==="
+          ls -la deploy/ || true
 
       - name: Deploy to LWS via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -55,6 +82,7 @@ jobs:
           local-dir: ./deploy/
           server-dir: /website/
           dangerous-clean-slate: false
+          log-level: verbose
 
       - name: Create and deploy restart trigger
         run: |
