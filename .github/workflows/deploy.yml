@@ -1,73 +1,72 @@
 name: Deploy to LWS cPanel
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    deploy:
+        runs-on: ubuntu-latest
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm ci
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
 
-      - name: Build Next.js
-        run: npm run build
-        env:
-          NODE_ENV: production
+            - name: Install dependencies
+              run: npm ci
 
-      - name: Prepare deployment files
-        run: |
-          mkdir -p deploy
-          # Copy standalone build
-          if [ -d ".next/standalone" ]; then
-            cp -r .next/standalone/* deploy/
-            # Copy static files
-            mkdir -p deploy/.next/static
-            cp -r .next/static/* deploy/.next/static/ 2>/dev/null || true
-          else
-            cp -r .next deploy/
-            rm -rf deploy/.next/cache
-          fi
-          # Copy public and config files
-          cp -r public deploy/
-          cp package.json deploy/
-          cp package-lock.json deploy/
-          cp server.js deploy/
+            - name: Build Next.js
+              run: npm run build
+              env:
+                  NODE_ENV: production
 
-      - name: Deploy to LWS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./deploy/
-          server-dir: /home/c2651735c/website/
-          dangerous-clean-slate: false
+            - name: Prepare deployment files
+              run: |
+                  mkdir -p deploy
+                  # Copy standalone build
+                  if [ -d ".next/standalone" ]; then
+                    cp -r .next/standalone/* deploy/
+                    # Copy static files
+                    mkdir -p deploy/.next/static
+                    cp -r .next/static/* deploy/.next/static/ 2>/dev/null || true
+                  else
+                    cp -r .next deploy/
+                    rm -rf deploy/.next/cache
+                  fi
+                  # Copy public and config files
+                  cp -r public deploy/
+                  cp package.json deploy/
+                  cp package-lock.json deploy/
+                  cp server.js deploy/
 
-      - name: Create restart trigger
-        run: |
-          echo "$(date)" > restart.txt
+            - name: Deploy to LWS via FTP
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+              with:
+                  server: koseg-ci.com
+                  username: ftp@koseg-ci.com
+                  password: Dr#Wanq2+ARa#7WM
+                  local-dir: ./deploy/
+                  server-dir: /home/c2651735c/website/
+                  dangerous-clean-slate: false
 
-      - name: Trigger restart
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /home/c2651735c/website/
-          include: restart.txt
-        continue-on-error: true
+            - name: Create restart trigger
+              run: |
+                  echo "$(date)" > restart.txt
 
+            - name: Trigger restart
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+              with:
+                  server: koseg-ci.com
+                  username: ftp@koseg-ci.com
+                  password: Dr#Wanq2+ARa#7WM
+                  local-dir: ./
+                  server-dir: /home/c2651735c/website/
+                  include: restart.txt
+              continue-on-error: true
