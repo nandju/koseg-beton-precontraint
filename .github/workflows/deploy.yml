@@ -50,7 +50,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.koseg-ci.com
-          username: ftp@koseg-ci.com
+          username: ftp_admin@koseg-ci.com
           password: Dr#Wanq2+ARa#7WM
           local-dir: ./deploy/
           server-dir: /home/c2651735c/website/
