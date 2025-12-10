@@ -53,20 +53,20 @@ jobs:
           username: c2651735c@koseg-ci.com
           password: 4mYGMqpJYbhfWxV
           local-dir: ./deploy/
-          server-dir: /home/c2651735c/website/
+          server-dir: /website/
           dangerous-clean-slate: false
 
-      - name: Create restart trigger
+      - name: Create and deploy restart trigger
         run: |
-          echo "$(date)" > restart.txt
+          mkdir -p restart-trigger
+          echo "$(date)" > restart-trigger/restart.txt
 
-      - name: Trigger restart
+      - name: Upload restart trigger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: koseg-ci.com
-          username: ftp@koseg-ci.com
-          password: Dr#Wanq2+ARa#7WM
-          local-dir: ./
-          server-dir: /home/c2651735c/website/
-          include: restart.txt
+          server: ftp.koseg-ci.com
+          username: c2651735c@koseg-ci.com
+          password: 4mYGMqpJYbhfWxV
+          local-dir: ./restart-trigger/
+          server-dir: /website/
         continue-on-error: true
