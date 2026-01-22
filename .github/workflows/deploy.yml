@@ -22,58 +22,29 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js
+      - name: Build Next.js static export
         run: npm run build
         env:
           NODE_ENV: production
 
-      - name: Prepare deployment files
+      - name: Prepare static deployment files
         run: |
           mkdir -p deploy
-          # Copy standalone build
-          if [ -d ".next/standalone" ]; then
-            echo "Using standalone build"
-            # Copy all standalone files
-            cp -r .next/standalone/* deploy/
-            # Copy static files to the correct location
-            mkdir -p deploy/.next/static
-            if [ -d ".next/static" ]; then
-              cp -r .next/static/* deploy/.next/static/
-            fi
-            # Ensure public folder is at root level
-            if [ -d "public" ]; then
-              cp -r public deploy/
-            fi
-            # Copy our custom server.js (overwrite the one from standalone if needed)
-            cp server.js deploy/
+          # Copy static export (Next.js generates 'out' directory for static export)
+          if [ -d "out" ]; then
+            echo "Copying static export from 'out' directory"
+            cp -r out/* deploy/
           else
-            echo "Using regular build"
-            cp -r .next deploy/
-            rm -rf deploy/.next/cache
-            cp -r public deploy/
-            cp package.json deploy/
-            cp package-lock.json deploy/
-            cp server.js deploy/
+            echo "Error: 'out' directory not found. Build may have failed."
+            exit 1
           fi
-          # Always copy package files
-          cp package.json deploy/
-          cp package-lock.json deploy/
-          # Create restart trigger file
-          echo "$(date)" > deploy/restart.txt
           # List files for debugging
-          echo "Files in deploy directory:"
-          ls -la deploy/ || true
-          echo "Checking .next structure:"
-          ls -la deploy/.next/ || true
-
-      - name: Verify deployment files
-        run: |
-          echo "=== Deployment files structure ==="
-          find deploy -type f -name "*.js" -o -name "*.json" | head -20
+          echo "=== Files in deploy directory ==="
+          ls -la deploy/ | head -20
           echo "=== Total files count ==="
           find deploy -type f | wc -l
-          echo "=== Directory structure ==="
-          ls -la deploy/ || true
+          echo "=== Sample HTML files ==="
+          find deploy -name "*.html" | head -5
 
       - name: Deploy to LWS via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
