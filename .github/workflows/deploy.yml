@@ -38,6 +38,8 @@ jobs:
             echo "Error: 'out' directory not found. Build may have failed."
             exit 1
           fi
+          # Copy .htaccess to deploy directory
+          cp .htaccess deploy/
           # List files for debugging
           echo "=== Files in deploy directory ==="
           ls -la deploy/ | head -20
@@ -46,13 +48,13 @@ jobs:
           echo "=== Sample HTML files ==="
           find deploy -name "*.html" | head -5
 
-      - name: Deploy to LWS via FTP
+      - name: Deploy to public_html
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.koseg-ci.com
           username: c2651735c@koseg-ci.com
           password: 4mYGMqpJYbhfWxV
           local-dir: ./deploy/
-          server-dir: /website2/
+          server-dir: /public_html/
           dangerous-clean-slate: false
           log-level: verbose
